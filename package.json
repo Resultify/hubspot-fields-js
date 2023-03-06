@@ -1,0 +1,50 @@
+{
+  "name": "@resultify/hubspot-fields-js",
+  "version": "0.0.1",
+  "description": "Resultify HubSpot fields.js to fields.json compiler",
+  "keywords": [
+    "hubspot",
+    "resultify",
+    "hubspot tools",
+    "hubspot cms lib",
+    "fields",
+    "fields.js",
+    "fields.json",
+    "hubspot cms"
+  ],
+  "homepage": "https://github.com/Resultify/hubspot-fields-js#readme",
+  "bugs": {
+    "url": "https://github.com/Resultify/hubspot-fields-js/issues"
+  },
+  "license": "MIT",
+  "author": "Resultify",
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Resultify/hubspot-fields-js.git"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "standardJs": "standard -v 'lib/**/*.js'",
+    "tslint": "tsc -p tsconfig.json",
+    "test": "npm run standardJs && npm run tslint"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.4",
+    "husky": "^8.0.1",
+    "standard": "^17.0.0",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=16.13",
+    "npm": ">=8.19"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module"
+}
