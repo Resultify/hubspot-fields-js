@@ -6,7 +6,7 @@
     "hubspot",
     "resultify",
     "hubspot tools",
-    "hubspot cms lib",
+    "hubspot cms",
     "fields",
     "fields.js",
     "fields.json",
@@ -19,7 +19,8 @@
   "license": "MIT",
   "author": "Resultify",
   "files": [
-    "lib/"
+    "lib/",
+    "partials/"
   ],
   "repository": {
     "type": "git",
