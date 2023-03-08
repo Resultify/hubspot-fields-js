@@ -1,4 +1,4 @@
-import fsPromises from 'fs/promises'
+import * as fsPromises from 'fs/promises'
 
 async function writeJson () {
   try {

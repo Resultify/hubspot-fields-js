@@ -1,16 +1,16 @@
-import { group } from '../../lib/group.js'
-import * as contentTabFields from '../../lib/content-tab-fields.js'
-import * as styleTabFields from '../../lib/style-tab-fields.js'
-import * as fields from '../../lib/fields.js'
+import { group } from '../lib/group.js'
+import * as contentTabFields from '../lib/content-tab-fields.js'
+import * as styleTabFields from '../lib/style-tab-fields.js'
+import * as fields from '../lib/fields.js'
 const fi = { ...contentTabFields, ...styleTabFields, ...fields }
 
-const nText = fi.text('text', 'Text', { allow_new_line: true })
+const text = fi.text('text', 'Text', { allow_new_line: true })
 
-const nTextGroup = group('text', 'Text', {},
+const textGroup = group('text', 'Text', {},
   fi.text('text', 'Text', { allow_new_line: true })
 )
 
-const nTextStyle = [
+const textStyle = [
   group('presets', 'Presets', {},
     fi.choice('custom_preset', 'Custom preset',
       {
@@ -46,4 +46,4 @@ const nTextStyle = [
   )
 ]
 
-export { nText, nTextGroup, nTextStyle }
+export { text, textGroup, textStyle }

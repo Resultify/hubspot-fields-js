@@ -18,6 +18,11 @@
   },
   "license": "MIT",
   "author": "Resultify",
+  "exports": {
+    "./fields": "./fields.js",
+    "./partials": "./partials.js",
+    "./lib/**/*.js": "./lib/**/*.js"
+  },
   "files": [
     "lib/",
     "partials/"
@@ -29,13 +34,14 @@
   "scripts": {
     "prepare": "husky install",
     "standardJs": "standard -v 'lib/**/*.js'",
-    "tslint": "tsc -p tsconfig.json",
-    "test": "npm run standardJs && npm run tslint"
+    "checkJs": "tsc -p jsconfig.json --maxNodeModuleJsDepth 0",
+    "compileFieldsJson": "node test/compileFieldsJson.js",
+    "test": "npm run standardJs && npm run checkJs && npm run compileFieldsJson"
   },
   "dependencies": {
+    "@types/node": "^18.14.4"
   },
   "devDependencies": {
-    "@types/node": "^18.14.4",
     "husky": "^8.0.1",
     "standard": "^17.0.0",
     "typescript": "^4.9.5"
