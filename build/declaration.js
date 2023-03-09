@@ -17,7 +17,9 @@ async function generateTsDeclarations () {
       '--allowJs',
       '-d',
       '--emitDeclarationOnly',
-      '--declarationMap'
+      '--declarationMap',
+      '--maxNodeModuleJsDepth',
+      '0'
     ]
     await execa('npm', ['exec', '--', 'tsc', ...config])
   } catch (error) {
