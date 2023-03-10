@@ -13,6 +13,7 @@ export type COMMON_FIELDS = {
      * Sets whether the field can be left blank in the editor. If true, content cannot be published without a value in the field.
      */
     required?: boolean | undefined;
+    id?: string | undefined;
     /**
      * Sets whether the field is editable in the content editor. If true, the field will not appear in the content editor.
      */
@@ -51,6 +52,7 @@ export type COMMON_FIELDS = {
 };
 export type COMMON_GROUP_FIELDS = {
     tab?: string | undefined;
+    children?: Object[] | undefined;
     expanded?: boolean | undefined;
     occurrence?: {
         min?: number | null | undefined;

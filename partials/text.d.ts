@@ -1,4 +1,4 @@
-export const text: Object;
-export const textGroup: Object;
-export const textStyle: Object[];
+export function text(): Object;
+export function textGroup(): Object;
+export function textStyle(): Object[];
 //# sourceMappingURL=text.d.ts.map

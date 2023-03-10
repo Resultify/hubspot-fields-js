@@ -18,6 +18,7 @@ export class CommonFields {
     name: string | undefined;
     label: string | undefined;
     type: string | undefined;
+    id: string;
     required: boolean;
     locked: boolean;
     inline_help_text: string | undefined;
@@ -55,6 +56,7 @@ export class CommonGroupFields {
      */
     constructor(fields?: T.COMMON_GROUP_FIELDS | undefined);
     expanded: boolean;
+    children: Object[];
     tab: string | undefined;
     occurrence: {
         min?: number | null | undefined;
