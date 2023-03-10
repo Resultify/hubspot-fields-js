@@ -19,11 +19,13 @@
   "license": "MIT",
   "author": "Resultify",
   "exports": {
-    "./fields": "./fields.js",
-    "./partials": "./partials.js",
-    "./lib/**/*.js": "./lib/**/*.js"
+    "./fields.js": "./fields.js",
+    "./partials.js": "./partials.js",
+    "./lib/*.js": "./lib/*.js"
   },
   "files": [
+    "./fields.js",
+    "./partials.js",
     "lib/",
     "partials/"
   ],
@@ -36,7 +38,7 @@
     "dts": "node build/declaration.js",
     "standardJs": "standard -v 'lib/**/*.js'",
     "checkJs": "tsc -p jsconfig.json --maxNodeModuleJsDepth 0",
-    "compileFieldsJson": "node test/compileFieldsJson.js",
+    "compileFieldsJson": "node test/fields.js",
     "test": "npm run standardJs && npm run checkJs && npm run compileFieldsJson"
   },
   "dependencies": {
