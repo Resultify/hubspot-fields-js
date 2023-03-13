@@ -11,7 +11,7 @@ export type LINK_FIELDS = {
     default?: {
         url?: {
             content_id?: string | undefined;
-            type?: string | undefined;
+            type: string;
             href?: string | undefined;
         } | undefined;
         open_in_new_tab?: boolean | undefined;
@@ -28,7 +28,7 @@ export type URL_FIELDS = {
     supported_types?: ("EXTERNAL" | "CONTENT" | "FILE" | "EMAIL_ADDRESS" | "BLOG" | "CALL_TO_ACTION")[] | undefined;
     default?: {
         content_id?: string | undefined;
-        type?: string | undefined;
+        type: string;
         href?: string | undefined;
     } | undefined;
 };
@@ -54,7 +54,7 @@ export function text(name: string, label: string, fields?: (T.COMMON_FIELDS & T.
  * @property {Object} [default]
  * @property {Object} [default.url]
  * @property {string} [default.url.content_id]
- * @property {string} [default.url.type]
+ * @property {string} default.url.type
  * @property {string} [default.url.href]
  * @property {true|false} [default.open_in_new_tab]
  * @property {true|false} [default.no_follow]
@@ -83,7 +83,7 @@ export function richtext(name: string, label: string, fields?: (T.COMMON_FIELDS 
  * @property {Array<'EXTERNAL'|'CONTENT'|'FILE'|'EMAIL_ADDRESS'|'BLOG'|'CALL_TO_ACTION'>} [supported_types]
  * @property {Object} [default]
  * @property {string} [default.content_id]
- * @property {string} [default.type]
+ * @property {string} default.type
  * @property {string} [default.href]
  * @param {string} name
  * @param {string} label
