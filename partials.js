@@ -1,6 +1,8 @@
 import { text, textStyle, textGroup } from './partials/text.js'
-export {
+const pa = {
   text,
   textStyle,
   textGroup
 }
+
+export { pa }
