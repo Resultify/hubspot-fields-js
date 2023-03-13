@@ -8,6 +8,10 @@ export const fi: {
     alignment: typeof styleTabFields.alignment;
     spacing: typeof styleTabFields.spacing;
     font: typeof styleTabFields.font;
+    gradient: typeof styleTabFields.gradient;
+    backgroundimage: typeof styleTabFields.backgroundimage;
+    border: typeof styleTabFields.border;
+    textalignment: typeof styleTabFields.textalignment;
     text: typeof contentTabFields.text;
     link: typeof contentTabFields.link;
     richtext: typeof contentTabFields.richtext;

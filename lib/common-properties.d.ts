@@ -15,15 +15,15 @@ export class CommonFields {
      * @returns {Object}
      */
     constructor(fields: T.COMMON_FIELDS);
-    name: string | undefined;
-    label: string | undefined;
-    type: string | undefined;
     id: string;
+    name: string | undefined;
+    display_width: "half_width" | null;
+    label: string | undefined;
     required: boolean;
     locked: boolean;
+    type: string | undefined;
     inline_help_text: string | undefined;
     help_text: string | undefined;
-    display_width: "half_width" | null;
     visibility_rules: string | undefined;
     visibility: {
         controlling_field?: string | undefined;

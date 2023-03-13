@@ -44,7 +44,7 @@ export type CHOISE_FIELDS = {
     /**
      * Set the field's appearance. When not including multiple, you can set this as either "radio" or "select". When multiple is set to true, you can set this as either "checkbox" or "select".
      */
-    display?: "select" | "radio" | undefined;
+    display?: "checkbox" | "select" | "radio" | undefined;
     /**
      * Array of value and label pairs. Values listed first.
      */
@@ -83,7 +83,7 @@ export function boolean(name: string, label: string, fields?: (T.COMMON_FIELDS &
  * @typedef {Object} CHOISE_FIELDS
  * @property {boolean} [multiple] Optional. To allow multiple options to be selected, set the value to true.
  * @property {boolean} [reordering_enabled]
- * @property {'select'|'radio'} [display] Set the field's appearance. When not including multiple, you can set this as either "radio" or "select". When multiple is set to true, you can set this as either "checkbox" or "select".
+ * @property {'select'|'radio'|'checkbox'} [display] Set the field's appearance. When not including multiple, you can set this as either "radio" or "select". When multiple is set to true, you can set this as either "checkbox" or "select".
  * @property {Array<Object>} [choices] Array of value and label pairs. Values listed first.
  * @property {Object} [default] Sets the default selected value from the choice array.
  * @param {string} name
