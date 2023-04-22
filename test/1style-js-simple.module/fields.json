@@ -1,0 +1,179 @@
+[
+  {
+    "id": "style",
+    "name": "style",
+    "label": "Style",
+    "locked": false,
+    "children": [
+      {
+        "alignment_direction": "HORIZONTAL",
+        "default": {
+          "horizontal_align": "LEFT"
+        },
+        "id": "style.alignment_field",
+        "name": "alignment_field",
+        "label": "Alignment",
+        "type": "alignment",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "default": {
+          "src": "",
+          "background_position": "MIDDLE_CENTER",
+          "background_size": "cover"
+        },
+        "id": "style.backgroundimage_field",
+        "name": "backgroundimage_field",
+        "label": "Background image",
+        "type": "backgroundimage",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "display": "checkbox",
+        "default": false,
+        "id": "style.boolean_field",
+        "name": "boolean_field",
+        "label": "Boolean",
+        "type": "boolean",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "allow_custom_border_sides": false,
+        "default": {},
+        "id": "style.border_field",
+        "name": "border_field",
+        "label": "Border",
+        "type": "border",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "multiple": false,
+        "reordering_enabled": true,
+        "display": "select",
+        "choices": [
+          [
+            "value 1",
+            "Label 1"
+          ],
+          [
+            "value 2",
+            "Label 2"
+          ]
+        ],
+        "id": "style.choice_field",
+        "name": "choice_field",
+        "label": "Choice",
+        "type": "choice",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "default": {
+          "color": null,
+          "opacity": null
+        },
+        "id": "style.color_field",
+        "name": "color_field",
+        "label": "Color",
+        "type": "color",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "load_external_fonts": true,
+        "default": {},
+        "id": "style.font_field",
+        "name": "font_field",
+        "label": "Font",
+        "type": "font",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "default": {},
+        "id": "style.gradient_field",
+        "name": "gradient_field",
+        "label": "Gradient",
+        "type": "gradient",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "icon_set": "fontawesome-5.14.0",
+        "default": {},
+        "id": "style.icon_field",
+        "name": "icon_field",
+        "label": "Icon",
+        "type": "icon",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "responsive": true,
+        "resizable": true,
+        "show_loading": false,
+        "default": {
+          "size_type": "auto",
+          "src": "",
+          "alt": null,
+          "loading": "lazy"
+        },
+        "id": "style.image_field",
+        "name": "image_field",
+        "label": "Image",
+        "type": "image",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "display": "text",
+        "step": 1,
+        "id": "style.number_field",
+        "name": "number_field",
+        "label": "Number",
+        "type": "number",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "default": {},
+        "id": "style.spacing_field",
+        "name": "spacing_field",
+        "label": "Spacing",
+        "type": "spacing",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "default": {
+          "text_align": "LEFT"
+        },
+        "id": "style.textalignment_field",
+        "name": "textalignment_field",
+        "label": "Text alignment",
+        "type": "textalignment",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      }
+    ],
+    "tab": "STYLE",
+    "type": "group"
+  }
+]

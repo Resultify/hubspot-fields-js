@@ -1,0 +1,173 @@
+[
+  {
+    "display": "checkbox",
+    "default": false,
+    "id": "boolean_field",
+    "name": "boolean_field",
+    "label": "Boolean",
+    "type": "boolean",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "multiple": false,
+    "reordering_enabled": true,
+    "display": "select",
+    "choices": [
+      [
+        "value 1",
+        "Label 1"
+      ],
+      [
+        "value 2",
+        "Label 2"
+      ]
+    ],
+    "id": "choice_field",
+    "name": "choice_field",
+    "label": "Choice",
+    "type": "choice",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "default": {
+      "color": null,
+      "opacity": null
+    },
+    "id": "color_field",
+    "name": "color_field",
+    "label": "Color",
+    "type": "color",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "load_external_fonts": true,
+    "default": {},
+    "id": "font_field",
+    "name": "font_field",
+    "label": "Font",
+    "type": "font",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "icon_set": "fontawesome-5.14.0",
+    "default": {},
+    "id": "icon_field",
+    "name": "icon_field",
+    "label": "Icon",
+    "type": "icon",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "responsive": true,
+    "resizable": true,
+    "show_loading": false,
+    "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "lazy"
+    },
+    "id": "image_field",
+    "name": "image_field",
+    "label": "Image",
+    "type": "image",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "show_advanced_rel_options": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG",
+      "CALL_TO_ACTION",
+      "PHONE_NUMBER",
+      "WHATSAPP_NUMBER"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    },
+    "id": "link_field",
+    "name": "link_field",
+    "label": "Link",
+    "type": "link",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "display": "text",
+    "step": 1,
+    "id": "number_field",
+    "name": "number_field",
+    "label": "Number",
+    "type": "number",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "richtext_field",
+    "name": "richtext_field",
+    "label": "Rich text",
+    "type": "richtext",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "validation_regex": "",
+    "id": "text_field",
+    "name": "text_field",
+    "label": "Text",
+    "type": "text",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG",
+      "CALL_TO_ACTION",
+      "PHONE_NUMBER",
+      "WHATSAPP_NUMBER"
+    ],
+    "default": {
+      "content_id": null,
+      "href": "",
+      "type": "EXTERNAL"
+    },
+    "id": "url_field",
+    "name": "url_field",
+    "label": "URL",
+    "type": "url",
+    "display_width": null,
+    "required": false,
+    "locked": false
+  }
+]
