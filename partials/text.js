@@ -5,49 +5,49 @@ import * as fields from '../lib/fields.js'
 const fi = { ...contentTabFields, ...styleTabFields, ...fields }
 
 function text () {
-  return fi.text('text', 'Text', { allow_new_line: true })
+  return fi.text('Text', 'text', { allow_new_line: true })
 }
 
 function textGroup () {
-  return group('text', 'Text', {},
-    fi.text('text', 'Text', { allow_new_line: true })
+  return group('Text', 'text', {},
+    fi.text('Text', 'text', { allow_new_line: true })
   )
 }
 
 function textStyle () {
   return [
-    group('presets', 'Presets', {},
-      fi.choice('custom_preset', 'Custom preset',
+    group('Presets', 'presets', {},
+      fi.choice('Custom_preset', 'custom preset',
         {
-          help_text: 'Custom presets to globally restyle module',
+          // help_text: 'Custom presets to globally restyle module',
           choices: [
-            ['preset1', 'Preset 1'],
-            ['preset2', 'Preset 2'],
-            ['preset3', 'Preset 3']
+            ['Preset1', 'preset 1'],
+            ['Preset2', 'preset 2'],
+            ['Preset3', 'preset 3']
           ]
         }
       )
     ),
-    group('alignment', 'Alignment', {},
-      fi.alignment('alignment', 'Alignment',
+    group('Alignment', 'alignment', {},
+      fi.alignment('Alignment', 'alignment',
         {
           alignment_direction: 'HORIZONTAL'
         }
       )
     ),
-    group('spacing', 'Spacing', {},
-      fi.spacing('spacing', 'Spacing')
+    group('Spacing', 'spacing', {},
+      fi.spacing('Spacing', 'spacing')
     ),
-    group('background', 'Background', {},
-      fi.color('color', 'Color')
+    group('Background', 'background', {},
+      fi.color('Color', 'color')
     ),
-    group('custom_theme_overrides', 'Custom theme overrides',
+    group('Custom_theme_overrides', 'custom theme overrides',
       {
-        help_text: 'Override global theme settings for the current component'
+        // help_text: 'Override global theme settings for the current component'
       },
-      fi.spacing('spacing', 'Spacing'),
-      fi.color('background', 'Background'),
-      fi.font('font', 'Font')
+      fi.spacing('Spacing', 'spacing'),
+      fi.color('Background', 'background'),
+      fi.font('Font', 'font')
     )
   ]
 }
