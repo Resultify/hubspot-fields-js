@@ -9,8 +9,12 @@ function text () {
 }
 
 function textGroup () {
-  return group('Text', 'text', {},
-    fi.text('Text', 'text', { allow_new_line: true })
+  return (
+    group('Text', 'text', {},
+      fi.text('Text', 'text', {
+        allow_new_line: true
+      })
+    )
   )
 }
 
