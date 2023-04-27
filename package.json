@@ -45,14 +45,9 @@
     "test": "npm run standardJs && npm run checkJs && npm run testAllFiles"
   },
   "dependencies": {
-    "@types/node": "~18.15.11",
-    "jsdoc": "^4.0.2",
-    "jsdoc-to-markdown": "^8.0.0"
+    "@types/node": "~18.15.11"
   },
   "devDependencies": {
-    "better-docs": "^2.7.2",
-    "del": "~7.0.0",
-    "execa": "~7.1.1",
     "husky": "~8.0.1",
     "standard": "~17.0.0",
     "typescript": "~5.0.4"
