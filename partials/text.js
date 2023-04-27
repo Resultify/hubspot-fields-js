@@ -56,4 +56,38 @@ function textStyle () {
   ]
 }
 
-export { text, textGroup, textStyle }
+function textStyle2 () {
+  return [
+    group('Text', 'text',
+      {
+        display_conditions: {
+          visibility: {
+            controlling_field_path: 'text.text',
+            operator: 'NOT_EMPTY'
+          }
+        }
+      },
+      group('Alignment', 'alignment', {},
+        fi.alignment('Alignment', 'alignment')
+      ),
+      group('Spacing', 'spacing', {},
+        fi.spacing('Spacing', 'spacing')
+      ),
+      group('Background', 'background', {},
+        fi.color('Color', 'color')
+      ),
+      group('Custom theme overrides', 'custom_theme_overrides',
+        {
+          editor_options: {
+            help_text: 'Override global theme settings for the current component'
+          }
+        },
+        fi.spacing('Spacing', 'spacing'),
+        fi.color('Background', 'background'),
+        fi.font('Font', 'font')
+      )
+    )
+  ]
+}
+
+export { text, textGroup, textStyle, textStyle2 }

@@ -134,4 +134,62 @@ function headingGroup () {
   )
 }
 
-export { heading, headingGroup }
+function headingStyle () {
+  return (
+    group('Heading', 'heading',
+      {
+        display_conditions: {
+          visibility: {
+            controlling_field_path: 'heading.text',
+            operator: 'NOT_EMPTY'
+          }
+        }
+      },
+      group('Alignment', 'alignment', {},
+        fi.alignment('Alignment', 'alignment')
+      ),
+      group('Spacing', 'spacing', {},
+        fi.spacing('Spacing', 'spacing')
+      ),
+      group('Background', 'background', {},
+        fi.color('Color', 'color')
+      ),
+      group('Custom theme overrides', 'custom_theme_overrides',
+        {
+          editor_options: {
+            help_text: 'Override global theme settings for the current component'
+          }
+        },
+        fi.spacing('Spacing', 'spacing'),
+        fi.color('Color', 'color')
+      ),
+      group('Icon', 'icon', {},
+        group('Custom theme overrides', 'custom_theme_overrides',
+          {
+            editor_options: {
+              help_text: 'Override global theme settings for the current component'
+            }
+          },
+          fi.spacing('Spacing', 'spacing'),
+          fi.color('Background', 'background'),
+          fi.color('Color', 'color'),
+          fi.border('Border', 'border'),
+          fi.number('Border radius', 'border_radius', {
+            step: 1,
+            min: 0,
+            max: 100,
+            prefix: '%'
+          }),
+          fi.number('Size', 'size', {
+            min: 0,
+            max: 400,
+            step: 1,
+            suffix: 'px'
+          })
+        )
+      )
+    )
+  )
+}
+
+export { heading, headingGroup, headingStyle }
