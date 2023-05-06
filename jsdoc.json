@@ -1,0 +1,19 @@
+{
+  "plugins": ["plugins/markdown"],
+  "source": {
+    "include": ["lib/", "fields.js", "partials.js", "partials/"]
+  },
+  "templates": {
+    "cleverLinks": true
+  },
+  "opts": {
+    "template": "templates/default",
+    "readme": "./README.md",
+    "destination": "./doc/",
+    "recurse": true,
+    "verbose": true
+  },
+  "markdown": {
+    "idInHeadings": true
+  }
+}
