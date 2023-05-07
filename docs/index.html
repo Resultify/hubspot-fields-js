@@ -44,11 +44,64 @@
 
     <section>
         <article><h1 id="hubspot-fields-js">hubspot-fields-js</h1>
-<p><strong>Generate HubSpot module <code>fields.json</code> from <code>fields.js</code></strong>
-<a href="https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields">HubSpot Module and theme fields</a></p>
+<p><strong>Generate HubSpot module <code>fields.json</code> from <code>fields.js</code></strong></p>
+<p><a href="https://github.com/Resultify/hubspot-fields-js/actions/workflows/test.yml"><img src="https://github.com/Resultify/hubspot-fields-js/actions/workflows/test.yml/badge.svg" alt="Run tests"></a>
+<img src="https://img.shields.io/node/v/@resultify/hubspot-fields-js" alt="node-current">
+<a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a>
+<img src="https://img.shields.io/badge/API%20documentation-JSDoc-yellow" alt="JSDoc"></p>
+<p><a href="https://resultify.github.io/hubspot-fields-js"><strong>Documentation</strong></a></p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#why">Why?</a></li>
+<li><a href="#main-features-and-advantages-to-other-solutions">Main features and advantages to other solutions</a></li>
+<li><a href="#general-recommendations">General recommendations</a></li>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#fieldjs-structure">field.js structure</a></li>
+<li><a href="#example">Example</a></li>
+<li><a href="#content-tab-fields-vs-style-tab-fields">Content tab fields vs Style tab fields</a></li>
+<li><a href="CHANGELOG.md">Changelog</a></li>
+</ul>
+<h2 id="why%3F">Why?</h2>
+<ul>
+<li>When you create and maintain <code>fields.json</code> files for modules, they can easily become long, challenging to read, and hard to update as time goes by. <code>hubspot-fields-js</code> provides a convenient way to work with these files in your HubSpot modules. This tool ensures ease of use and simplifies the process of updating these files over time.</li>
+<li>One of the biggest advantages is the ability to abstract fields into partials. This allows for the creation of a library of field groups that can be reused across all modules. This leads to a more consistent organization and naming of options, making it easier for users to establish muscle memory and have a positive overall experience.</li>
+<li>Developers can now fully implement the module in their local development environment, which is the final step in bringing HubSpot CMS development to their local setup. This provides developers with extensive opportunities to enhance their work.</li>
+<li>No issues with module <code>IDs</code> in the version control system (<code>git</code>) when using multiple HubSpot accounts in development. For example, a few developer sandboxes and a production HubSpot account.</li>
+<li>There is great potential for automation and code generation. Using <code>JS</code> you can easily automate any task you desire.</li>
+</ul>
+<h2 id="main-features-and-advantages-to-other-solutions">Main features and advantages to other solutions</h2>
+<ul>
+<li>All fields have thorough documentation both <a href="https://resultify.github.io/hubspot-fields-js/">externally</a> and within the code.</li>
+<li>The fields in fields.js come with predefined default values (same as in HubSpot), which helps reduce the amount of code needed. If you're happy with a default value, you can simply skip adding it.</li>
+<li>All fields are fully documented with <code>JSDoc</code> syntax, providing complete support for <strong>code completion</strong> and <strong>documentation in code editors</strong>. You no longer need to refer to HubSpot documentation to comprehend field meanings or available options/values. <code>hubspot-fields-js</code> includes all necessary information within your code editor.</li>
+<li>The API abstraction is kept to a minimum, using JSON-like JavaScript. If you are already familiar with HubSpot's fields.json, you do not need to learn much more as the main field structure is essentially the same.</li>
+<li>You don't need any additional dependencies such as some JS task runners to start. All you need is <code>Node.js</code> to compile your <code>fields.js</code> files. But for more convenience, you can use our <a href="#general-recommendations">hubspot-cms-lib</a> or any other task runner on your choice.</li>
+</ul>
+<h2 id="general-recommendations">General recommendations</h2>
+<ul>
+<li>Add <code>modules/../fields.json</code> to <code>.gitignore</code></li>
+<li>Create modules on your local environment, not in HubSpot design tools</li>
+<li>Ignore adding any module <code>id</code> in <code>meta.json</code> from the start. Keep it simple:</li>
+</ul>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;global&quot; : false,
+  &quot;host_template_types&quot; : [ &quot;PAGE&quot;, &quot;BLOG_POST&quot;, &quot;BLOG_LISTING&quot; ],
+  &quot;is_available_for_new_content&quot; : true
+}
+</code></pre>
+<ul>
+<li>Check our <a href="https://github.com/Resultify/hubspot-cms-lib">hubspot-cms-lib</a> to get the full potential of <code>hubspot-fields-js</code> and much more benefits:
+<ul>
+<li>&quot;Watch&quot; process for all HubSpot CMS theme files plus compiling <code>felds.js</code> and uploading <code>fields.json</code>.</li>
+<li>JS<code>ES6</code>/CSS/SASS compilers with the possibility to configure any options on a theme base.</li>
+<li>HubSpot CLI <code>upload</code>, <code>fetch</code> and <code>watch</code> commands integrated with other scripts.</li>
+<li>Custom HubSpot multi-account authentication for easier work with multiple accounts.</li>
+</ul>
+</li>
+</ul>
 <h2 id="quick-start">Quick start</h2>
 <ol>
-<li>Inatall <code>hubspot-fields-js</code> package</li>
+<li>Install <code>hubspot-fields-js</code> package</li>
 </ol>
 <pre class="prettyprint source lang-js"><code>npm install hubspot-fields-js
 </code></pre>
@@ -59,7 +112,7 @@
 <li>Compile <code>fields.js</code> to <code>fields.json</code> by running command <code>node path/to/module/fields.js</code></li>
 <li>Upload module to HubSpot</li>
 </ol>
-<h2 id="field-structure">Field structure</h2>
+<h2 id="field.js-structure"><code>field.js</code> structure</h2>
 <p>Each field or group with some exceptions consists of:</p>
 <ul>
 <li>Label</li>
@@ -69,8 +122,9 @@
 <li>Display conditions</li>
 <li>Repeater options</li>
 </ul>
-<h2 id="field.js-structure-exaple"><code>field.js</code> structure exaple</h2>
-<pre class="prettyprint source lang-js"><code>// imports ...
+<pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
+import { fi } from '@resultify/hubspot-fields-js/fields.js'
+import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
 
 initModule( //initialize module
     fi.text( // add text field
@@ -85,7 +139,9 @@ initModule( //initialize module
     )
 )
 </code></pre>
-<pre class="prettyprint source lang-js"><code>// imports ...
+<pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
+import { fi } from '@resultify/hubspot-fields-js/fields.js'
+import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
 
 initModule( //initialize module
     group( // add group
@@ -106,11 +162,10 @@ initModule( //initialize module
     )
 )
 </code></pre>
-<h2 id="example-of-fields.js-file">Example of fields.js file</h2>
+<h2 id="example">Example</h2>
 <pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
 import { fi } from '@resultify/hubspot-fields-js/fields.js'
 import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
-import { pa } from '@resultify/hubspot-fields-js/partials.js'
 
 initModule(
   fi.boolean('Boolean', 'boolean_field', {
@@ -206,7 +261,7 @@ initModule(
   })
 )
 </code></pre>
-<p>Check more examples in <code>examples</code> folder.</p>
+<p>Check more examples in <code>partials</code> folder.</p>
 <h2 id="content-tab-fields-vs-style-tab-fields">Content tab fields vs Style tab fields</h2>
 <table>
 <thead>
