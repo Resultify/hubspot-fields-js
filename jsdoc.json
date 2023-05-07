@@ -9,7 +9,7 @@
   "opts": {
     "template": "templates/default",
     "readme": "./README.md",
-    "destination": "./doc/",
+    "destination": "./docs/",
     "recurse": true,
     "verbose": true
   },

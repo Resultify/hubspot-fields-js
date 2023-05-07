@@ -173,7 +173,7 @@ Check more examples in `examples` folder.
 |❌ Date|✅ Gradient|✅ Boolean|
 |❌ Date and time|✅ Spacing|✅ Choice|
 |❌ Embed|✅ Background image|✅ Number|
-|✅ Link|Border|✅ Color|
+|✅ Link|✅ Border|✅ Color|
 |✅ Rich text|✅ Alignment|✅ Icon|
 |❌ Simple menu|✅ Text alignment|✅ Image|
 |✅ Text||✅ Font|
