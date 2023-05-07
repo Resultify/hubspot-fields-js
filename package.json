@@ -60,5 +60,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "standard": {
+    "ignore": [
+      "docs/"
+    ]
+  },
   "type": "module"
 }

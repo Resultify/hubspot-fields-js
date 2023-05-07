@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1 id="hubspot-fields-js">hubspot-fields-js</h1>
+<p><strong>Generate HubSpot module <code>fields.json</code> from <code>fields.js</code></strong>
+<a href="https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields">HubSpot Module and theme fields</a></p>
+<h2 id="quick-start">Quick start</h2>
+<ol>
+<li>Inatall <code>hubspot-fields-js</code> package</li>
+</ol>
+<pre class="prettyprint source lang-js"><code>npm install hubspot-fields-js
+</code></pre>
+<ol start="2">
+<li>Create a new module</li>
+<li>Create <code>fields.js</code> file in the module folder</li>
+<li>Add fields to <code>fields.js</code> file</li>
+<li>Compile <code>fields.js</code> to <code>fields.json</code> by running command <code>node path/to/module/fields.js</code></li>
+<li>Upload module to HubSpot</li>
+</ol>
+<h2 id="field-structure">Field structure</h2>
+<p>Each field or group with some exceptions consists of:</p>
+<ul>
+<li>Label</li>
+<li>Name</li>
+<li>Content options (unique options per field)</li>
+<li>Editor options</li>
+<li>Display conditions</li>
+<li>Repeater options</li>
+</ul>
+<h2 id="field.js-structure-exaple"><code>field.js</code> structure exaple</h2>
+<pre class="prettyprint source lang-js"><code>// imports ...
+
+initModule( //initialize module
+    fi.text( // add text field
+        'Text', // label
+        'text', // name
+        {
+            // content options (unique options per field)
+            editor_options: {} // editor options
+            display_conditions: {} // display conditions
+            repeater_options: {} // repeater options
+        }
+    )
+)
+</code></pre>
+<pre class="prettyprint source lang-js"><code>// imports ...
+
+initModule( //initialize module
+    group( // add group
+        'Group', // group label
+        'group', // group name
+        {
+            // group options (group unique options)
+            editor_options: {} // editor options
+            display_conditions: {} // display conditions
+            repeater_options: {} // repeater options
+        },
+        // add all childrens...
+        fi.text( 'Text', 'text'),
+        fi.image( 'Image', 'image'),
+        group( 'Group2', 'group2', {},
+            fi.text( 'Text2', 'text2')
+        )
+    )
+)
+</code></pre>
+<h2 id="example-of-fields.js-file">Example of fields.js file</h2>
+<pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
+import { fi } from '@resultify/hubspot-fields-js/fields.js'
+import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+import { pa } from '@resultify/hubspot-fields-js/partials.js'
+
+initModule(
+  fi.boolean('Boolean', 'boolean_field', {
+    display: 'toggle',
+    default: true,
+    editor_options: {
+      help_text: 'tooltip',
+      required: true
+    }
+  }),
+  fi.choice('Choice', 'choice_field', {
+    default: 'value 1',
+    display: 'radio',
+    editor_options: {
+      locked: true,
+      inline_help_text: 'Inline'
+    }
+  }),
+  fi.color('Color', 'color_field', {
+    show_opacity: false,
+    default: {
+      color: '#FF0201'
+    },
+    display_conditions: {
+      visibility: {
+        controlling_field_path: 'boolean_field',
+        operator: 'EQUAL',
+        controlling_value_regex: 'true'
+      }
+    }
+  }),
+  fi.font('Font', 'font_field', {
+    default: {
+      font: 'Open Sans',
+      fallback: 'sans-serif',
+      font_set: 'GOOGLE',
+      color: '#FF00FF',
+      variant: '600'
+    }
+  }),
+  fi.icon('Icon', 'icon_field'),
+  fi.image('Image', 'image_field', {
+    repeater_options: {
+      occurrence: {
+        max: 10
+      }
+    }
+  }),
+  fi.link('Link', 'link_field', {
+    default: {
+      url: {
+        type: 'CONTENT'
+      }
+    },
+    editor_options: {
+      required: true
+    },
+    repeater_options: {
+      occurrence: {}
+    }
+  }),
+  fi.number('Number', 'number_field', {
+    suffix: '%',
+    max: 1000,
+    step: 1,
+    repeater_options_default: {
+      occurrence: {
+        min: 2,
+        default: 4
+      },
+      default: []
+    }
+
+  }),
+  fi.richtext('Rich text', 'richtext_field', {
+    default: '&lt;h1>Default rich text&lt;/h1>'
+  }),
+  fi.text('Text', 'text_field', {
+    show_emoji_picker: true,
+    default: 'Default text',
+    placeholder: 'Placeholder',
+    repeater_options_default: {
+      occurrence: {
+        default: 5
+      },
+      default: ['Default text', 'Default text', 'Default text', 'Default text', 'Default text']
+    }
+  }),
+  fi.url('URL', 'url_field', {
+    default: {
+      type: 'BLOG'
+    }
+  })
+)
+</code></pre>
+<p>Check more examples in <code>examples</code> folder.</p>
+<h2 id="content-tab-fields-vs-style-tab-fields">Content tab fields vs Style tab fields</h2>
+<table>
+<thead>
+<tr>
+<th>Content tab</th>
+<th>Style tab</th>
+<th>Universal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❌ Date</td>
+<td>✅ Gradient</td>
+<td>✅ Boolean</td>
+</tr>
+<tr>
+<td>❌ Date and time</td>
+<td>✅ Spacing</td>
+<td>✅ Choice</td>
+</tr>
+<tr>
+<td>❌ Embed</td>
+<td>✅ Background image</td>
+<td>✅ Number</td>
+</tr>
+<tr>
+<td>✅ Link</td>
+<td>✅ Border</td>
+<td>✅ Color</td>
+</tr>
+<tr>
+<td>✅ Rich text</td>
+<td>✅ Alignment</td>
+<td>✅ Icon</td>
+</tr>
+<tr>
+<td>❌ Simple menu</td>
+<td>✅ Text alignment</td>
+<td>✅ Image</td>
+</tr>
+<tr>
+<td>✅ Text</td>
+<td></td>
+<td>✅ Font</td>
+</tr>
+<tr>
+<td>✅ Url</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Blog</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ CRM object</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ CRM object property</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ CTA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Email addres</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ File</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Followup email</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Form</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ HubDB row</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ HubDB table</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Logo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Meeting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Menu</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Tag</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>❌ Video</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>✅ - <em>implemented</em> / ❌ - <em>not implemented</em></p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#fi">fi</a></li><li><a href="global.html#group">group</a></li><li><a href="global.html#initModule">initModule</a></li><li><a href="global.html#styleGroup">styleGroup</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun May 07 2023 16:22:51 GMT+0300 (Eastern European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
