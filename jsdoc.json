@@ -4,7 +4,10 @@
     "include": ["lib/", "fields.js", "partials.js", "partials/"]
   },
   "templates": {
-    "cleverLinks": true
+    "cleverLinks": true,
+    "default": {
+      "includeDate": false
+    }
   },
   "opts": {
     "template": "templates/default",
