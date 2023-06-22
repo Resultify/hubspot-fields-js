@@ -32,7 +32,7 @@
 - The fields in fields.js come with predefined default values (same as in HubSpot), which helps reduce the amount of code needed. If you're happy with a default value, you can simply skip adding it.
 - The API abstraction is kept to a minimum, using JSON-like JavaScript. If you are already familiar with HubSpot's `fields.json`, you do not need to learn much more as the main field structure is essentially the same.
 - You don't need any additional dependencies such as some JS task runners to start. All you need is `Node.js` to compile your `fields.js` files. But for more convenience, you can use our [hubspot-cms-lib](#general-recommendations) or any other task runner on your choice.
-- ‼️ All fields are fully documented with `JSDoc` syntax, providing complete support for **code completion** and **documentation in code editors**. You no longer need to refer to HubSpot documentation to comprehend field meanings or available options/values. `hubspot-fields-js` includes all necessary information within your code editor.
+- ❗All fields are fully documented with `JSDoc` syntax, providing complete support for **code completion** and **documentation in code editors**. You no longer need to refer to HubSpot documentation to comprehend field meanings or available options/values. `hubspot-fields-js` includes all necessary information within your code editor.
 
 ![screenshot1](https://user-images.githubusercontent.com/5150636/236792985-7aa81773-c9cd-415e-94bf-54b8c17f9007.png)
 
@@ -63,7 +63,7 @@
 ## Quick start
 1. Install `hubspot-fields-js` package
 ```js
-npm install hubspot-fields-js
+npm install @resultify/hubspot-fields-js
 ```
 2. Create a new module
 3. Create `fields.js` file in the module folder
