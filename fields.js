@@ -3,7 +3,7 @@ import * as styleTabFields from './lib/style-tab-fields.js'
 import * as fields from './lib/fields.js'
 
 /**
- * ### Module fields entry point
+ * #### Module fields entry point
  * @constant
  * @example
  * import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
