@@ -8,5 +8,5 @@
     "useUnknownInCatchVariables": false,
     "moduleResolution": "node"
   },
-  "include": ["lib/**/*", "partials/**/*", "test/**/*", "fields.js", "partials.js"],
+  "include": ["lib/**/*", "partials/**/*", "test/**/*", "index.js"],
 }

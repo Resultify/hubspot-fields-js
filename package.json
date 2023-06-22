@@ -18,14 +18,9 @@
   },
   "license": "MIT",
   "author": "Resultify",
-  "exports": {
-    "./fields.js": "./fields.js",
-    "./partials.js": "./partials.js",
-    "./lib/*.js": "./lib/*.js"
-  },
+  "main": "index.js",
   "files": [
-    "./fields.js",
-    "./partials.js",
+    "./index.js",
     "lib/",
     "partials/"
   ],

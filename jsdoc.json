@@ -1,7 +1,7 @@
 {
   "plugins": ["plugins/markdown"],
   "source": {
-    "include": ["lib/", "fields.js", "partials.js", "partials/"]
+    "include": ["lib/", "index.js", "partials/"]
   },
   "templates": {
     "cleverLinks": true,
