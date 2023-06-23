@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: group.js</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link type="text/css" rel="stylesheet" href="styles/base.min.css">
+</head>
+
+<body class="body">
+
+    <div class="container">
+
+        <nav class="sidenav">
+            <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#group">group</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#styleGroup">styleGroup</a></li><li><a href="global.html#writeJson">writeJson</a></li></ul>
+        </nav>
+
+        <main id="main" class="main">
+            <div id="content" class="content">
+                <h1 class="page-title">Source: group.js</h1>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import * as T from './config/types.js' // eslint-disable-line
+import { EditorOptions, DisplayConditions, RepeaterOptions, RepeaterOptionsDefault } from './common-properties.js'
+
+/**
+ * @ignore
+ * @typedef {T.EDITOR_OPTIONS} EDITOR_OPTIONS {@link EDITOR_OPTIONS}
+ * @typedef {T.DISPLAY_CONDITIONS} DISPLAY_CONDITIONS {@link DISPLAY_CONDITIONS}
+ * @typedef {T.REPEATER_OPTIONS} REPEATER_OPTIONS {@link REPEATER_OPTIONS}
+ * @typedef {T.REPEATER_OPTIONS_DEFAULT} REPEATER_OPTIONS_DEFAULT {@link REPEATER_OPTIONS_DEFAULT}
+ * @typedef {T.COMMON_FIELDS} COMMON_FIELDS {@link COMMON_FIELDS}
+ */
+
+// *************
+// Group Fields
+// *************
+
+/**
+ * #### Fields group. When fields are related to each other often it makes sense for them to be displayed visually grouped.
+ * @example
+ * group('Group', 'group', {group_options},
+ *    fi.text('Text_label1', 'text__name1'),
+ *    fi.text('Text_label2', 'text__name2'),
+ *    group('Group2', 'group2', {group2_options},
+ *        fi.text('Text_label3', 'text_name3')
+ *    )
+ * )
+ * @param {string} label The text the content creator sees describing the group. May contain spaces.
+ * @param {string} name Group field/HubL variable name, which you'll reference when incorporating the group field and its values in the module or theme. `Cannot contain spaces or special characters!`
+ * @param {Object} [fields]
+ * @param {boolean} [fields.expanded=false] `false` Field groups can be set to be expanded by default by setting the expanded boolean property to true
+ * @param {EDITOR_OPTIONS} [fields.editor_options] Editor options group.
+ * @param {DISPLAY_CONDITIONS} [fields.display_conditions] Display conditions group.
+ * @param {REPEATER_OPTIONS} [fields.repeater_options] Repeater options. Keep `occurrence` object empty to just enable a feature. `repeater_options: {occurrence: {}}`
+ * @param {REPEATER_OPTIONS_DEFAULT} [fields.repeater_options_default] Repeater options with predefined repeated fields and `default` values for each field.
+ * @param {Array&lt;COMMON_FIELDS>} childrens
+ * @returns {COMMON_FIELDS}
+ */
+function group (label, name, fields, ...childrens) {
+  /** @type {COMMON_FIELDS} */
+  const requiredFields = { type: 'group', id: '', name, label, children: [] }
+  const editorOptions = new EditorOptions({ ...fields?.editor_options })
+  const displayConditions = new DisplayConditions({ ...fields?.display_conditions })
+  const repeaterOptions = new RepeaterOptions({ ...fields?.repeater_options })
+  let repeaterOptionsDefault
+  if (fields?.repeater_options_default) {
+    repeaterOptionsDefault = new RepeaterOptionsDefault({ ...fields.repeater_options_default })
+  }
+  const groupOptions = {}
+  groupOptions.expanded = fields?.expanded ?? false
+  childrens.forEach(element => {
+    if (Array.isArray(element)) {
+      requiredFields.children?.push(...element)
+    } else {
+      requiredFields.children?.push(element)
+    }
+  })
+
+  return {
+    ...requiredFields,
+    ...groupOptions,
+    ...editorOptions,
+    ...displayConditions,
+    ...repeaterOptions,
+    ...repeaterOptionsDefault
+  }
+}
+
+/**
+ * #### Main high-level Style group wrapper. Use only once to wrap all style fields.
+ * @example
+ * styleGroup(
+ *    fi.alignment('alignment', 'Alignment')
+ * )
+ * @param {Array&lt;COMMON_FIELDS>} childrens
+ * @returns {COMMON_FIELDS}
+ */
+function styleGroup (...childrens) {
+  /** @type {COMMON_FIELDS} */
+  const baseFields = {
+    id: 'style',
+    name: 'style',
+    label: 'Style',
+    locked: false,
+    children: [],
+    tab: 'STYLE',
+    type: 'group'
+  }
+  childrens.forEach(element => {
+    if (Array.isArray(element)) {
+      baseFields.children?.push(...element)
+    } else {
+      baseFields.children?.push(element)
+    }
+  })
+  return { ...baseFields }
+}
+
+export { group, styleGroup }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+
+            <div class="toc">
+                <h2>Table of contents</h2>
+                <div class="toc-nav"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('.prettyprint.linenums code').forEach((el) => {
+                hljs.configure({
+                    languages: ['javascript'],
+                });
+                hljs.highlightElement(el);
+                hljs.lineNumbersBlock(el);
+            });
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.configure({
+                    languages: ['javascript'],
+                });
+                hljs.highlightElement(el);
+            });
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc-nav',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.main article',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1.name, h2.name, h3.name, h4.name',
+        headingLabelCallback: (string) => string
+    });
+    </script>
+</body>
+</html>

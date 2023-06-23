@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>JSDoc: Global</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/base.min.css">
 </head>
 
-<body>
+<body class="body">
 
-<div id="main">
+    <div class="container">
 
-    <h1 class="page-title">Global</h1>
+        <nav class="sidenav">
+            <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#group">group</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#styleGroup">styleGroup</a></li><li><a href="global.html#writeJson">writeJson</a></li></ul>
+        </nav>
 
-    
+        <main id="main" class="main">
+            <div id="content" class="content">
+                <h1 class="page-title">Global</h1>
+                
 
 
 
@@ -94,87 +94,6 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="fi"><span class="type-signature">(constant) </span>fi<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    <h3 id="module-fields-entry-point">Module fields entry point</h3>
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="fields.js.html">fields.js</a>, <a href="fields.js.html#line21">line 21</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
-initModule(
-  styleGroup(
-    fi.alignment('Alignment', 'alignment')
-  ),
-  fi.link('Link', 'link')
-  fi.text('Text', 'text')
-  fi.number('Number', 'number')
-)</code></pre>
-
-
-
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -185,7 +104,7 @@ initModule(
     
 
     
-    <h4 class="name" id="group"><span class="type-signature"></span>group<span class="signature">(label, name, fields<span class="signature-attributes">opt</span>, &hellip;childrens)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    <h4 class="name" id="group" data-heading-label="group" ><span class="type-signature"></span>group<span class="signature">(label, name, fields<span class="signature-attributes">opt</span>, &hellip;childrens)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
     
 
     
@@ -207,6 +126,7 @@ initModule(
     <h5>Parameters:</h5>
     
 
+<div class="responsive-table">
 <table class="params">
     <thead>
     <tr>
@@ -323,6 +243,7 @@ initModule(
                 <h6>Properties</h6>
                 
 
+<div class="responsive-table">
 <table class="params">
     <thead>
     <tr>
@@ -535,6 +456,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
             </td>
         </tr>
@@ -549,7 +471,7 @@ initModule(
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Object></span>
+<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
 
 
             
@@ -575,6 +497,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
 
 
@@ -610,7 +533,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_group.js.html">lib/group.js</a>, <a href="lib_group.js.html#line59">line 59</a>
+        <a href="group.js.html">group.js</a>, <a href="group.js.html#line38">line 38</a>
     </li></ul></dd>
     
 
@@ -646,7 +569,7 @@ initModule(
     </dt>
     <dd>
         
-<span class="param-type">Object</span>
+<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
 
 
     </dd>
@@ -675,7 +598,7 @@ initModule(
     
 
     
-    <h4 class="name" id="initModule"><span class="type-signature">(async) </span>initModule<span class="signature">(&hellip;childrens)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="init" data-heading-label="init" ><span class="type-signature"></span>init<span class="signature">(&hellip;fields)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>>}</span></h4>
     
 
     
@@ -683,8 +606,8 @@ initModule(
 
 
 <div class="description">
-    <h4 id="init-the-fields-process">Init the fields process</h4>
-<p>Combine all the fields and groups into one array, add an id and write it to a file fields.json</p>
+    <h4 id="initialize-and-return-an-array-of-fields-object-from-fields.js">Initialize and return an array of fields object from fields.js</h4>
+<p>Combine all the fields and groups objects into one array, and return it.</p>
 </div>
 
 
@@ -698,6 +621,7 @@ initModule(
     <h5>Parameters:</h5>
     
 
+<div class="responsive-table">
 <table class="params">
     <thead>
     <tr>
@@ -722,13 +646,13 @@ initModule(
 
         <tr>
             
-                <td class="name"><code>childrens</code></td>
+                <td class="name"><code>fields</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;any></span>
+<span class="param-type">Array.&lt;(<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>|Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>>)></span>
 
 
             
@@ -754,6 +678,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
 
 
@@ -789,7 +714,361 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_init.js.html">lib/init.js</a>, <a href="lib_init.js.html#line44">line 44</a>
+        <a href="init.js.html">init.js</a>, <a href="init.js.html#line52">line 52</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>\/* eslint-disable no-unused-vars *\/
+ import {
+   group,
+   styleGroup,
+   initModule,
+   moduleFields as fi
+ } from '@resultify/hubspot-fields-js'
+
+ init(
+   styleGroup(
+     fi.alignment('Alignment', 'alignment')
+   ),
+   group('Group', 'group', {},
+    fi.text('Text', 'text')
+   ),
+   fi.link('Link', 'link')
+ )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="styleGroup" data-heading-label="styleGroup" ><span class="type-signature"></span>styleGroup<span class="signature">(&hellip;childrens)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <h4 id="main-high-level-style-group-wrapper.-use-only-once-to-wrap-all-style-fields.">Main high-level Style group wrapper. Use only once to wrap all style fields.</h4>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>childrens</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="group.js.html">group.js</a>, <a href="group.js.html#line77">line 77</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>styleGroup(
+   fi.alignment('alignment', 'Alignment')
+)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="writeJson" data-heading-label="writeJson" ><span class="type-signature">(async) </span>writeJson<span class="signature">(data)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <h4 id="write-fields-data-from-fields.js-to-a-fields.json">Write fields data from fields.js to a fields.json</h4>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="init.js.html">init.js</a>, <a href="init.js.html#line91">line 91</a>
     </li></ul></dd>
     
 
@@ -830,47 +1109,66 @@ initModule(
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>initModule(
-   styleGroup(
-     fi.alignment('Alignment', 'alignment')
+    <pre class="prettyprint"><code>\/* eslint-disable no-unused-vars *\/
+ import {
+   group,
+   styleGroup,
+   initModule,
+   moduleFields as fi
+ } from '@resultify/hubspot-fields-js'
+
+ writeJson(JSON_DATA)
+
+ // or
+
+ writeJson(init(
+   group(
+     fi.number('Number', 'number')
    ),
-   group('Group', 'group', {},
-    fi.text('Text', 'text')
-   ),
-   fi.link('Link', 'link')
- )</code></pre>
+   fi.number('Number', 'number')
+ ))</code></pre>
 
 
 
         
-            
-
     
 
     
-    <h4 class="name" id="styleGroup"><span class="type-signature"></span>styleGroup<span class="signature">(&hellip;childrens)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
+        <h3 class="subsection-title">Type Definitions</h3>
 
-    
+        
+                
+<h4 class="name" id="COMMON_FIELDS" data-heading-label="COMMON_FIELDS">COMMON_FIELDS</h4>
+
 
 
 
 <div class="description">
-    <h4 id="main-high-level-style-group-wrapper.-use-only-once-to-wrap-all-style-fields.">Main high-level Style group wrapper. Use only once to wrap all style fields.</h4>
+    <h4 id="required-module-fields">Required module fields</h4>
 </div>
 
 
 
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
 
 
 
 
 
+    <h5 class="subsection-title">Properties:</h5>
 
-    <h5>Parameters:</h5>
     
 
-<table class="params">
+<div class="responsive-table">
+<table class="props">
     <thead>
     <tr>
         
@@ -894,13 +1192,13 @@ initModule(
 
         <tr>
             
-                <td class="name"><code>childrens</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Object></span>
+<span class="param-type">string</span>
 
 
             
@@ -911,9 +1209,185 @@ initModule(
                 
 
                 
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
 
                 
-                    &lt;repeatable><br>
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>label</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tab</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>locked</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>children</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
                 
                 </td>
             
@@ -926,8 +1400,7 @@ initModule(
     
     </tbody>
 </table>
-
-
+</div>
 
 
 
@@ -961,7 +1434,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_group.js.html">lib/group.js</a>, <a href="lib_group.js.html#line97">line 97</a>
+        <a href="config_types.js.html">config/types.js</a>, <a href="config_types.js.html#line48">line 48</a>
     </li></ul></dd>
     
 
@@ -977,57 +1450,10 @@ initModule(
 
 
 
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>styleGroup(
-   fi.alignment('alignment', 'Alignment')
-)</code></pre>
-
-
-
-        
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
+            
                 
-<h4 class="name" id="DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</h4>
+<h4 class="name" id="DISPLAY_CONDITIONS" data-heading-label="DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</h4>
 
-
-<p class="summary"><p>Display conditions</p></p>
 
 
 
@@ -1055,6 +1481,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -1106,6 +1533,7 @@ initModule(
             <td class="description last"><p>Sets the field's display conditions. For example, you can set a field to only display when another checkbox field has been selected</p>
                 <h6>Properties</h6>
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -1291,6 +1719,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
             </td>
         </tr>
@@ -1326,6 +1755,7 @@ initModule(
             <td class="description last"><p>To include multiple criteria with multiple operators, as well as order of operations, you can use advanced_visibility.</p>
                 <h6>Properties</h6>
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -1543,6 +1973,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
             </td>
         </tr>
@@ -1550,6 +1981,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
 
 
@@ -1583,7 +2015,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line11">line 11</a>
+        <a href="config_types.js.html">config/types.js</a>, <a href="config_types.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -1601,12 +2033,14 @@ initModule(
 
             
                 
-<h4 class="name" id="EDITOR_OPTIONS">EDITOR_OPTIONS</h4>
+<h4 class="name" id="EDITOR_OPTIONS" data-heading-label="EDITOR_OPTIONS">EDITOR_OPTIONS</h4>
 
 
-<p class="summary"><p>HubSpot module editor options</p></p>
 
 
+<div class="description">
+    <h4 id="hubspot-module-editor-options">HubSpot module editor options</h4>
+</div>
 
 
 
@@ -1628,6 +2062,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -1837,238 +2272,10 @@ initModule(
     
     </tbody>
 </table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="FAKE_FIELDS_MAP">FAKE_FIELDS_MAP</h4>
-
-
-<p class="summary"><p>&quot;Fake&quot; General module content fields structure</p></p>
-
-
-
-<div class="description">
-    <p>This is a &quot;fake&quot; structure to help developers distinguish between the different types of fields that can be used in a module. This is not a real HubSpot structure and should not be used in any way other than with <code>hubspot-fields-js</code>.</p>
 </div>
 
 
 
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>editor_options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#EDITOR_OPTIONS">EDITOR_OPTIONS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Editor options</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>display_conditions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Display conditions, keep <code>visibility</code> object empty to just enable a feature - <code>display_conditions: {visibility: {}}</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeater_options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#REPEATER_OPTIONS">REPEATER_OPTIONS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Repeater options, keep <code>occurrence</code> object empty to just enable a feature - <code>repeater_options: {occurrence: {}}</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeater_options_default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Repeater options with more than <code>0</code> repeated fields and <code>default</code> values for each field</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
 
 <dl class="details">
 
@@ -2099,7 +2306,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_utils_initField.js.html">lib/utils/initField.js</a>, <a href="lib_utils_initField.js.html#line12">line 12</a>
+        <a href="config_types.js.html">config/types.js</a>, <a href="config_types.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -2117,7 +2324,7 @@ initModule(
 
             
                 
-<h4 class="name" id="LINK_DEFAULT">LINK_DEFAULT</h4>
+<h4 class="name" id="LINK_DEFAULT" data-heading-label="LINK_DEFAULT">LINK_DEFAULT</h4>
 
 
 
@@ -2142,6 +2349,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -2193,6 +2401,7 @@ initModule(
             <td class="description last"><p>Default URL object</p>
                 <h6>Properties</h6>
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -2332,6 +2541,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
             </td>
         </tr>
@@ -2463,6 +2673,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
 
 
@@ -2496,7 +2707,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_content-tab-fields.js.html">lib/content-tab-fields.js</a>, <a href="lib_content-tab-fields.js.html#line51">line 51</a>
+        <a href="content-tab-fields.js.html">content-tab-fields.js</a>, <a href="content-tab-fields.js.html#line53">line 53</a>
     </li></ul></dd>
     
 
@@ -2514,7 +2725,7 @@ initModule(
 
             
                 
-<h4 class="name" id="LINK_SUPPORTED_TYPES">LINK_SUPPORTED_TYPES</h4>
+<h4 class="name" id="LINK_SUPPORTED_TYPES" data-heading-label="LINK_SUPPORTED_TYPES">LINK_SUPPORTED_TYPES</h4>
 
 
 
@@ -2585,7 +2796,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_content-tab-fields.js.html">lib/content-tab-fields.js</a>, <a href="lib_content-tab-fields.js.html#line63">line 63</a>
+        <a href="content-tab-fields.js.html">content-tab-fields.js</a>, <a href="content-tab-fields.js.html#line65">line 65</a>
     </li></ul></dd>
     
 
@@ -2603,10 +2814,8 @@ initModule(
 
             
                 
-<h4 class="name" id="REPEATER_OPTIONS">REPEATER_OPTIONS</h4>
+<h4 class="name" id="REPEATER_OPTIONS" data-heading-label="REPEATER_OPTIONS">REPEATER_OPTIONS</h4>
 
-
-<p class="summary"><p>Repeater options</p></p>
 
 
 
@@ -2634,6 +2843,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -2685,6 +2895,7 @@ initModule(
             <td class="description last"><p>To make the editing experience better and prevent content editors from providing values that you have not programmatically accommodated for, we allow you to set minimum and maximum values for how many items content creators can add to a repeating field or repeating group. Keep <code>occurrence</code> object empty to just enable a feature - <code>repeater_options: {occurrence: {}}</code></p>
                 <h6>Properties</h6>
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -2774,6 +2985,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
             </td>
         </tr>
@@ -2781,81 +2993,10 @@ initModule(
     
     </tbody>
 </table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line28">line 28</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#EDITOR_OPTIONS"><code>EDITOR_OPTIONS</code></a></p>
 </div>
 
 
 
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.EDITOR_OPTIONS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
 
 <dl class="details">
 
@@ -2886,7 +3027,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_common-properties.js.html">lib/common-properties.js</a>, <a href="lib_common-properties.js.html#line3">line 3</a>
+        <a href="config_types.js.html">config/types.js</a>, <a href="config_types.js.html#line28">line 28</a>
     </li></ul></dd>
     
 
@@ -2904,10 +3045,8 @@ initModule(
 
             
                 
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
+<h4 class="name" id="REPEATER_OPTIONS_DEFAULT" data-heading-label="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
 
-
-<p class="summary"><p>Repeater options with defaults</p></p>
 
 
 
@@ -2935,6 +3074,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -2976,6 +3116,7 @@ initModule(
             <td class="description last"><p>To make the editing experience better and prevent content editors from providing values that you have not programmatically accommodated for, we allow you to set minimum and maximum values for how many items content creators can add to a repeating field or repeating group</p>
                 <h6>Properties</h6>
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -3096,6 +3237,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
             </td>
         </tr>
@@ -3126,81 +3268,10 @@ initModule(
     
     </tbody>
 </table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line37">line 37</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#EDITOR_OPTIONS"><code>EDITOR_OPTIONS</code></a></p>
 </div>
 
 
 
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.EDITOR_OPTIONS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
 
 <dl class="details">
 
@@ -3231,7 +3302,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_content-tab-fields.js.html">lib/content-tab-fields.js</a>, <a href="lib_content-tab-fields.js.html#line4">line 4</a>
+        <a href="config_types.js.html">config/types.js</a>, <a href="config_types.js.html#line37">line 37</a>
     </li></ul></dd>
     
 
@@ -3249,1728 +3320,7 @@ initModule(
 
             
                 
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#EDITOR_OPTIONS"><code>EDITOR_OPTIONS</code></a></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.EDITOR_OPTIONS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_fields.js.html">lib/fields.js</a>, <a href="lib_fields.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#EDITOR_OPTIONS"><code>EDITOR_OPTIONS</code></a></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.EDITOR_OPTIONS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_group.js.html">lib/group.js</a>, <a href="lib_group.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#EDITOR_OPTIONS"><code>EDITOR_OPTIONS</code></a></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.EDITOR_OPTIONS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_style-tab-fields.js.html">lib/style-tab-fields.js</a>, <a href="lib_style-tab-fields.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_FIELDS">REQUIRED_FIELDS</h4>
-
-
-<p class="summary"><p>Required module fields</p></p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>label</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line48">line 48</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_FIELDS">REQUIRED_FIELDS</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#REQUIRED_GROUP_FIELDS"><code>REQUIRED_GROUP_FIELDS</code></a></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.REQUIRED_GROUP_FIELDS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_init.js.html">lib/init.js</a>, <a href="lib_init.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_FIELDS">REQUIRED_FIELDS</h4>
-
-
-
-
-<div class="description">
-    <p><a href="global.html#EDITOR_OPTIONS"><code>EDITOR_OPTIONS</code></a></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">T.EDITOR_OPTIONS</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_utils_initField.js.html">lib/utils/initField.js</a>, <a href="lib_utils_initField.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_GROUP_FIELDS">REQUIRED_GROUP_FIELDS</h4>
-
-
-<p class="summary"><p>Required group module fields</p></p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>label</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>tab</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>children</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="global.html#REQUIRED_GROUP_FIELDS">REQUIRED_GROUP_FIELDS</a>></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line57">line 57</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_GROUP_FIELDS">REQUIRED_GROUP_FIELDS</h4>
-
-
-<p class="summary"><p>Required group module fields</p></p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>label</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>tab</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>children</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_group.js.html">lib/group.js</a>, <a href="lib_group.js.html#line11">line 11</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_STYLE_GROUP_FIELDS">REQUIRED_STYLE_GROUP_FIELDS</h4>
-
-
-<p class="summary"><p>Style group fields</p></p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>label</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>locked</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>tab</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'STYLE'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'group'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>children</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_config_types.js.html">lib/config/types.js</a>, <a href="lib_config_types.js.html#line68">line 68</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REQUIRED_STYLE_GROUP_FIELDS">REQUIRED_STYLE_GROUP_FIELDS</h4>
-
-
-<p class="summary"><p>Style group fields</p></p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>label</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>locked</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>tab</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'STYLE'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'group'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>children</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_group.js.html">lib/group.js</a>, <a href="lib_group.js.html#line22">line 22</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="RGBA_COLOR">RGBA_COLOR</h4>
+<h4 class="name" id="RGBA_COLOR" data-heading-label="RGBA_COLOR">RGBA_COLOR</h4>
 
 
 
@@ -4995,6 +3345,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -5108,6 +3459,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
 
 
@@ -5141,7 +3493,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_style-tab-fields.js.html">lib/style-tab-fields.js</a>, <a href="lib_style-tab-fields.js.html#line109">line 109</a>
+        <a href="style-tab-fields.js.html">style-tab-fields.js</a>, <a href="style-tab-fields.js.html#line111">line 111</a>
     </li></ul></dd>
     
 
@@ -5159,7 +3511,7 @@ initModule(
 
             
                 
-<h4 class="name" id="TEXT_STYLES">TEXT_STYLES</h4>
+<h4 class="name" id="TEXT_STYLES" data-heading-label="TEXT_STYLES">TEXT_STYLES</h4>
 
 
 
@@ -5184,6 +3536,7 @@ initModule(
 
     
 
+<div class="responsive-table">
 <table class="props">
     <thead>
     <tr>
@@ -5309,6 +3662,7 @@ initModule(
     
     </tbody>
 </table>
+</div>
 
 
 
@@ -5342,7 +3696,7 @@ initModule(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_fields.js.html">lib/fields.js</a>, <a href="lib_fields.js.html#line222">line 222</a>
+        <a href="fields.js.html">fields.js</a>, <a href="fields.js.html#line224">line 224</a>
     </li></ul></dd>
     
 
@@ -5369,19 +3723,48 @@ initModule(
 
 
 
-</div>
+            </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#fi">fi</a></li><li><a href="global.html#group">group</a></li><li><a href="global.html#initModule">initModule</a></li><li><a href="global.html#styleGroup">styleGroup</a></li></ul>
-</nav>
+            <div class="toc">
+                <h2>Table of contents</h2>
+                <div class="toc-nav"></div>
+            </div>
+        </main>
 
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+        <footer class="footer">
+            Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('.prettyprint.linenums code').forEach((el) => {
+                hljs.configure({
+                    languages: ['javascript'],
+                });
+                hljs.highlightElement(el);
+                hljs.lineNumbersBlock(el);
+            });
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.configure({
+                    languages: ['javascript'],
+                });
+                hljs.highlightElement(el);
+            });
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc-nav',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.main article',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1.name, h2.name, h3.name, h4.name',
+        headingLabelCallback: (string) => string
+    });
+    </script>
 </body>
 </html>

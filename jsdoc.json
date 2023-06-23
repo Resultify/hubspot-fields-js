@@ -10,7 +10,7 @@
     }
   },
   "opts": {
-    "template": "templates/default",
+    "template": "node_modules/modern-jsdoc-template/default",
     "readme": "./README.md",
     "destination": "./docs/",
     "recurse": true,

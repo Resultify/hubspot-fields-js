@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>JSDoc: Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/base.min.css">
 </head>
 
-<body>
+<body class="body">
 
-<div id="main">
+    <div class="container">
 
-    <h1 class="page-title">Home</h1>
+        <nav class="sidenav">
+            <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#group">group</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#styleGroup">styleGroup</a></li><li><a href="global.html#writeJson">writeJson</a></li></ul>
+        </nav>
 
-    
+        <main id="main" class="main">
+            <div id="content" class="content">
+                <h1 class="page-title">Home</h1>
+                
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-    <section>
+    <section class="readme">
         <article><h1 id="hubspot-fields-js">hubspot-fields-js</h1>
 <p><strong>Generate HubSpot module <code>fields.json</code> from <code>fields.js</code></strong></p>
 <p><a href="https://github.com/Resultify/hubspot-fields-js/actions/workflows/test.yml"><img src="https://github.com/Resultify/hubspot-fields-js/actions/workflows/test.yml/badge.svg" alt="Run tests"></a>
@@ -73,10 +73,14 @@
 <ul>
 <li>All fields have thorough documentation both <a href="https://resultify.github.io/hubspot-fields-js/">externally</a> and within the code.</li>
 <li>The fields in fields.js come with predefined default values (same as in HubSpot), which helps reduce the amount of code needed. If you're happy with a default value, you can simply skip adding it.</li>
-<li>All fields are fully documented with <code>JSDoc</code> syntax, providing complete support for <strong>code completion</strong> and <strong>documentation in code editors</strong>. You no longer need to refer to HubSpot documentation to comprehend field meanings or available options/values. <code>hubspot-fields-js</code> includes all necessary information within your code editor.</li>
-<li>The API abstraction is kept to a minimum, using JSON-like JavaScript. If you are already familiar with HubSpot's fields.json, you do not need to learn much more as the main field structure is essentially the same.</li>
+<li>The API abstraction is kept to a minimum, using JSON-like JavaScript. If you are already familiar with HubSpot's <code>fields.json</code>, you do not need to learn much more as the main field structure is essentially the same.</li>
 <li>You don't need any additional dependencies such as some JS task runners to start. All you need is <code>Node.js</code> to compile your <code>fields.js</code> files. But for more convenience, you can use our <a href="#general-recommendations">hubspot-cms-lib</a> or any other task runner on your choice.</li>
+<li>❗All fields are fully documented with <code>JSDoc</code> syntax, providing complete support for <strong>code completion</strong> and <strong>documentation in code editors</strong>. You no longer need to refer to HubSpot documentation to comprehend field meanings or available options/values. <code>hubspot-fields-js</code> includes all necessary information within your code editor.</li>
 </ul>
+<p><img src="https://user-images.githubusercontent.com/5150636/236792985-7aa81773-c9cd-415e-94bf-54b8c17f9007.png" alt="screenshot1"></p>
+<p><img src="https://user-images.githubusercontent.com/5150636/236793037-01b2c2e9-446f-4aeb-8a8a-2cfb3438b4bf.png" alt="screenshot2"></p>
+<p><img src="https://user-images.githubusercontent.com/5150636/236793072-55ff8f90-3a44-4a86-86c6-7a530b372808.png" alt="screenshot3"></p>
+<p><img src="https://user-images.githubusercontent.com/5150636/236793099-e181edb1-281f-4f64-bcba-287a58c3e254.png" alt="screenshot4"></p>
 <h2 id="general-recommendations">General recommendations</h2>
 <ul>
 <li>Add <code>modules/../fields.json</code> to <code>.gitignore</code></li>
@@ -103,7 +107,7 @@
 <ol>
 <li>Install <code>hubspot-fields-js</code> package</li>
 </ol>
-<pre class="prettyprint source lang-js"><code>npm install hubspot-fields-js
+<pre class="prettyprint source lang-js"><code>npm install @resultify/hubspot-fields-js
 </code></pre>
 <ol start="2">
 <li>Create a new module</li>
@@ -402,19 +406,48 @@ initModule(
 
 
 
-</div>
+            </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#fi">fi</a></li><li><a href="global.html#group">group</a></li><li><a href="global.html#initModule">initModule</a></li><li><a href="global.html#styleGroup">styleGroup</a></li></ul>
-</nav>
+            <div class="toc">
+                <h2>Table of contents</h2>
+                <div class="toc-nav"></div>
+            </div>
+        </main>
 
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+        <footer class="footer">
+            Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('.prettyprint.linenums code').forEach((el) => {
+                hljs.configure({
+                    languages: ['javascript'],
+                });
+                hljs.highlightElement(el);
+                hljs.lineNumbersBlock(el);
+            });
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.configure({
+                    languages: ['javascript'],
+                });
+                hljs.highlightElement(el);
+            });
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc-nav',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.main article',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1.name, h2.name, h3.name, h4.name',
+        headingLabelCallback: (string) => string
+    });
+    </script>
 </body>
 </html>
