@@ -1,9 +1,13 @@
-import { initModule } from '../../lib/init.js'
-import { fi } from '../../fields.js'
-import { group, styleGroup } from '../../lib/group.js' // eslint-disable-line
-import { pa } from '../../partials.js' // eslint-disable-line
+/* eslint-disable no-unused-vars */
+import {
+  group,
+  styleGroup,
+  init,
+  moduleFields as fi,
+  writeJson
+} from '../../index.js'
 
-initModule(
+writeJson(init(
   fi.boolean('Boolean', 'boolean_field', {
     display: 'toggle',
     default: true,
@@ -95,4 +99,4 @@ initModule(
       type: 'BLOG'
     }
   })
-)
+))

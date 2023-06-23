@@ -1,0 +1,50 @@
+[
+  {
+    "type": "group",
+    "id": "group",
+    "name": "group",
+    "label": "Group",
+    "children": [
+      {
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "validation_regex": "",
+        "id": "group.text_field",
+        "name": "text_field",
+        "label": "Text",
+        "type": "text",
+        "display_width": null,
+        "required": false,
+        "locked": false
+      },
+      {
+        "type": "group",
+        "id": "group.group2",
+        "name": "group2",
+        "label": "Group2",
+        "children": [
+          {
+            "allow_new_line": false,
+            "show_emoji_picker": false,
+            "validation_regex": "",
+            "id": "group.group2.text_field",
+            "name": "text_field",
+            "label": "Text",
+            "type": "text",
+            "display_width": null,
+            "required": false,
+            "locked": false
+          }
+        ],
+        "expanded": false,
+        "display_width": null,
+        "required": false,
+        "locked": false
+      }
+    ],
+    "expanded": false,
+    "display_width": null,
+    "required": false,
+    "locked": false
+  }
+]
