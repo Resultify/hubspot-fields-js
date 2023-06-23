@@ -24,35 +24,6 @@ import {
   url
 } from './lib/content-tab-fields.js'
 
-import * as pImage from './partials/image.js'
-import * as pIcon from './partials/icon.js'
-import * as pText from './partials/text.js'
-import * as pHeading from './partials/heading.js'
-import * as pSubheading from './partials/subheading.js'
-import * as pRichtext from './partials/richtext.js'
-import * as pLink from './partials/link.js'
-import * as pSecondaryLink from './partials/secondary-link.js'
-import * as pButton from './partials/button.js'
-import * as pSecondaryButton from './partials/secondary-button.js'
-
-/**
- * #### Partials entry point
- * @ignore
- * @constant
- */
-const partials = {
-  image: pImage,
-  icon: pIcon,
-  heading: pText,
-  subheading: pHeading,
-  text: pSubheading,
-  richtext: pRichtext,
-  link: pLink,
-  secondaryLink: pSecondaryLink,
-  button: pButton,
-  secondaryButto: pSecondaryButton
-}
-
 /**
  * #### Module fields entry point
  * @ignore
@@ -93,4 +64,4 @@ const themeFields = {
   border
 }
 
-export { moduleFields, themeFields, partials, group, styleGroup, init, writeJson }
+export { moduleFields, themeFields, group, styleGroup, init, writeJson }
