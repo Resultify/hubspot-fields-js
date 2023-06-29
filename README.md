@@ -83,11 +83,15 @@ Each field or group with some exceptions consists of:
 - Repeater options
 
 ```js
-import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+import {
+  group,
+  styleGroup,
+  init,
+  writeJson,
+  moduleFields as fi
+} from '@resultify/hubspot-fields-js'
 
-initModule( //initialize module
+writeJson(init( //initialize module and write to JSON (fields.json)
     fi.text( // add text field
         'Text', // label
         'text', // name
@@ -98,15 +102,19 @@ initModule( //initialize module
             repeater_options: {} // repeater options
         }
     )
-)
+))
 ```
 
 ```js
-import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+import {
+  group,
+  styleGroup,
+  init,
+  writeJson,
+  moduleFields as fi
+} from '@resultify/hubspot-fields-js'
 
-initModule( //initialize module
+writeJson(init( //initialize module and write to JSON (fields.json)
     group( // add group
         'Group', // group label
         'group', // group name
@@ -123,17 +131,21 @@ initModule( //initialize module
             fi.text( 'Text2', 'text2')
         )
     )
-)
+))
 ```
 
 ## Example
 
 ```js
-import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+import {
+  group,
+  styleGroup,
+  init,
+  writeJson,
+  moduleFields as fi
+} from '@resultify/hubspot-fields-js'
 
-initModule(
+writeJson(init(
   fi.boolean('Boolean', 'boolean_field', {
     display: 'toggle',
     default: true,
@@ -225,7 +237,7 @@ initModule(
       type: 'BLOG'
     }
   })
-)
+))
 ```
 Check more examples in `partials` folder.
 
