@@ -126,11 +126,15 @@
 <li>Display conditions</li>
 <li>Repeater options</li>
 </ul>
-<pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+<pre class="prettyprint source lang-js"><code>import {
+  group,
+  styleGroup,
+  init,
+  writeJson,
+  moduleFields as fi
+} from '@resultify/hubspot-fields-js'
 
-initModule( //initialize module
+writeJson(init( //initialize module and write to JSON (fields.json)
     fi.text( // add text field
         'Text', // label
         'text', // name
@@ -141,13 +145,17 @@ initModule( //initialize module
             repeater_options: {} // repeater options
         }
     )
-)
+))
 </code></pre>
-<pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+<pre class="prettyprint source lang-js"><code>import {
+  group,
+  styleGroup,
+  init,
+  writeJson,
+  moduleFields as fi
+} from '@resultify/hubspot-fields-js'
 
-initModule( //initialize module
+writeJson(init( //initialize module and write to JSON (fields.json)
     group( // add group
         'Group', // group label
         'group', // group name
@@ -164,14 +172,18 @@ initModule( //initialize module
             fi.text( 'Text2', 'text2')
         )
     )
-)
+))
 </code></pre>
 <h2 id="example">Example</h2>
-<pre class="prettyprint source lang-js"><code>import { initModule } from '@resultify/hubspot-fields-js/lib/init.js'
-import { fi } from '@resultify/hubspot-fields-js/fields.js'
-import { group, styleGroup } from '@resultify/hubspot-fields-js/lib/group.js'
+<pre class="prettyprint source lang-js"><code>import {
+  group,
+  styleGroup,
+  init,
+  writeJson,
+  moduleFields as fi
+} from '@resultify/hubspot-fields-js'
 
-initModule(
+writeJson(init(
   fi.boolean('Boolean', 'boolean_field', {
     display: 'toggle',
     default: true,
@@ -263,7 +275,7 @@ initModule(
       type: 'BLOG'
     }
   })
-)
+))
 </code></pre>
 <p>Check more examples in <code>partials</code> folder.</p>
 <h2 id="content-tab-fields-vs-style-tab-fields">Content tab fields vs Style tab fields</h2>

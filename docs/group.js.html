@@ -36,6 +36,7 @@ import { EditorOptions, DisplayConditions, RepeaterOptions, RepeaterOptionsDefau
  * @typedef {TYPES.REPEATER_OPTIONS} REPEATER_OPTIONS {@link REPEATER_OPTIONS}
  * @typedef {TYPES.REPEATER_OPTIONS_DEFAULT} REPEATER_OPTIONS_DEFAULT {@link REPEATER_OPTIONS_DEFAULT}
  * @typedef {TYPES.COMMON_FIELDS} COMMON_FIELDS {@link COMMON_FIELDS}
+ * @typedef {TYPES.NESTED_COMMON_FIELDS} NESTED_COMMON_FIELDS {@link NESTED_COMMON_FIELDS}
  */
 
 // *************
@@ -60,7 +61,7 @@ import { EditorOptions, DisplayConditions, RepeaterOptions, RepeaterOptionsDefau
  * @param {DISPLAY_CONDITIONS} [fields.display_conditions] Display conditions group.
  * @param {REPEATER_OPTIONS} [fields.repeater_options] Repeater options. Keep `occurrence` object empty to just enable a feature. `repeater_options: {occurrence: {}}`
  * @param {REPEATER_OPTIONS_DEFAULT} [fields.repeater_options_default] Repeater options with predefined repeated fields and `default` values for each field.
- * @param {Array&lt;COMMON_FIELDS>} childrens
+ * @param {Array&lt;NESTED_COMMON_FIELDS>} childrens
  * @returns {COMMON_FIELDS}
  */
 function group (label, name, fields, ...childrens) {
@@ -77,7 +78,7 @@ function group (label, name, fields, ...childrens) {
   groupOptions.expanded = fields?.expanded ?? false
   childrens.forEach(element => {
     if (Array.isArray(element)) {
-      requiredFields.children?.push(...element)
+      requiredFields.children?.push(...element.flat(3))
     } else {
       requiredFields.children?.push(element)
     }
@@ -99,7 +100,7 @@ function group (label, name, fields, ...childrens) {
  * styleGroup(
  *    fi.alignment('alignment', 'Alignment')
  * )
- * @param {Array&lt;COMMON_FIELDS>} childrens
+ * @param {Array&lt;NESTED_COMMON_FIELDS>} childrens
  * @returns {COMMON_FIELDS}
  */
 function styleGroup (...childrens) {
@@ -115,7 +116,7 @@ function styleGroup (...childrens) {
   }
   childrens.forEach(element => {
     if (Array.isArray(element)) {
-      baseFields.children?.push(...element)
+      baseFields.children?.push(...element.flat(3))
     } else {
       baseFields.children?.push(element)
     }

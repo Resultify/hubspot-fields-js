@@ -27,6 +27,12 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
+ * #### Inherited values
+ * @typedef {any} INHERITED_VALUES
+ * @property {string} [color]
+ */
+
+/**
  * #### HubSpot module editor options
  * @typedef {Object} EDITOR_OPTIONS
  * @property {boolean} [required=false] `false` Sets whether the field can be left blank in the editor. If true, content cannot be published without a value in the field.
@@ -34,6 +40,36 @@
  * @property {string} [help_text] Text that displays in the editor within a tooltip on hover to assist the content creator (limit 300 characters). Best used for information that is supplementary but not required to use the field. You can include the following HTML tags (other tags will be ignored on render): a, b, br, em, i, p, small, strong, span.
  * @property {string} [inline_help_text] Text that displays inline below field's label (limit 400 characters). Best used for information required to use the field. You can include the following HTML tags (other tags will be ignored on render): a, b, br, em, i, p, small, strong, span.
  * @property {null|'half_width'} [display_width=full_width] `full_width` By default, fields are full-width in the editor.
+ * @property {Object} [inherited_value]
+ * @property {INHERITED_VALUES} [inherited_value.property_value_paths]
+ */
+
+/**
+ * #### Hidden subfields properties
+ * @typedef {Object} HIDDEN_SUBFIELDS
+ * @property {boolean} [margin]
+ * @property {boolean} [padding]
+ * @property {boolean} [bold]
+ * @property {boolean} [italic]
+ * @property {boolean} [underline]
+ * @property {boolean} [color]
+ * @property {boolean} [size]
+ */
+
+/**
+ * #### Advanced visibility criteria
+ * @typedef {Object} ADVANCED_VISIBILITY_CRITERIA
+ * @property {string} [controlling_field_path] The path of the field that controls the display condition.
+ * @property {string} [controlling_value_regex] The value in the controlling field that needs to be met to display the field.
+ * @property {'NOT_EQUAL'|'EQUAL'|'EMPTY'|'NOT_EMPTY'|'MATCHES_REGEX'} [operator] The operator that defines how the `controlling_value_regex` value needs to be met.
+ * @property {?string} [property] Sets visibility based on a specific property of the target field. For example, you can enable visibility when an image field's src property is equal to a specific value. By default, if no value is provided for this field, visibility is based on the stringified value of `controlling_value_regex`.
+ */
+
+/**
+ * #### Advanced visibility
+ * @typedef {Object} ADVANCED_VISIBILITY
+ * @property {'OR'|'AND'} [advanced_visibility.boolean_operator=OR] `OR` The boolean operator for the conditional criteria. Can be `AND` or `OR`
+ * @property {Array&lt;ADVANCED_VISIBILITY_CRITERIA>} [advanced_visibility.criteria] An array of visibility objects that defines the conditional criteria that needs to be met for the field to display.
  */
 
 /**
@@ -41,16 +77,15 @@
  * @description Occasionally, you may want to show a field or field group, but only under specfic conditions. Examples might include: `Address fields that correspond to a specific country` or `An image description that is only entered after an image is selected`
  * @typedef {Object} DISPLAY_CONDITIONS
  * @property {Object} [visibility] Sets the field's display conditions. For example, you can set a field to only display when another checkbox field has been selected
+ * @property {HIDDEN_SUBFIELDS} [visibility.hidden_subfields] Hide subfields of a field. For example, you can hide the margin from spacing field and show only the padding. Ony works for Theme settings fields.
  * @property {?string} [visibility.controlling_field_path] The path of the field that controls the display condition. If the field is not nested inside a field group, use the field's name (i.e. `field_name`). For fields nested in groups, the path should match its grouping structure, separated by a period. For example: `field_group_name.field_name` or `parent_group.child_group.field_name`
  * @property {?string} [visibility.controlling_value_regex] The regular expression in the controlling field that needs to be present for the field to display. The regex must match the entire string (not a subset) and is run case-sensitively.
  * @property {'NOT_EQUAL'|'EQUAL'|'EMPTY'|'NOT_EMPTY'|'MATCHES_REGEX'} [visibility.operator=EMPTY] `EMPTY` The operator that defines how the `controlling_value_regex` value needs to be met
  * @property {?string} [visibility.property] Sets visibility based on a specific property of the target field. For example, you can enable visibility when an image field's src property is equal to a specific value. By default, if no value is provided for this field, visibility is based on the stringified value of `controlling_value_regex`.
  * @property {Object} [advanced_visibility] To include multiple criteria with multiple operators, as well as order of operations, you can use advanced_visibility.
  * @property {'OR'|'AND'} [advanced_visibility.boolean_operator=OR] `OR` The boolean operator for the conditional criteria. Can be `AND` or `OR`
- * @property {Object[]} [advanced_visibility.criteria] An array of visibility objects that defines the conditional criteria that needs to be met for the field to display.
- * @property {string} [advanced_visibility.criteria[].controlling_field_path] The path of the field that controls the display condition.
- * @property {string} [advanced_visibility.criteria[].controlling_value_regex] The value in the controlling field that needs to be met to display the field.
- * @property {'NOT_EQUAL'|'EQUAL'|'EMPTY'|'NOT_EMPTY'|'MATCHES_REGEX'} [advanced_visibility.criteria[].operator] The operator that defines how the `controlling_value_regex` value needs to be met.
+ * @property {Array&lt;ADVANCED_VISIBILITY_CRITERIA>} [advanced_visibility.criteria] An array of visibility objects that defines the conditional criteria that needs to be met for the field to display.
+ * @property {Array&lt;ADVANCED_VISIBILITY>} [advanced_visibility.children]
  */
 
 /**
@@ -83,7 +118,11 @@
  * @property {string} [tab]
  * @property {boolean} [locked]
  * @property {Array&lt;COMMON_FIELDS>} [children]
+ */
 
+/**
+ * #### nested common fields
+ * @typedef { COMMON_FIELDS | COMMON_FIELDS[] | Array&lt;COMMON_FIELDS | COMMON_FIELDS[]> | Array&lt;COMMON_FIELDS | Array&lt;COMMON_FIELDS | COMMON_FIELDS[]>> } NESTED_COMMON_FIELDS
  */
 
 export default {}

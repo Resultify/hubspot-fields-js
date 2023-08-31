@@ -2050,6 +2050,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -2075,6 +2077,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
 
             
 
@@ -2097,6 +2109,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -2286,6 +2306,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -2311,6 +2333,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
 
             
 
@@ -2333,6 +2365,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -2522,6 +2562,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -2547,6 +2589,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
 
             
 
@@ -2569,6 +2621,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -2758,6 +2818,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -2783,6 +2845,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
 
             
 
@@ -2805,6 +2877,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -4016,7 +4096,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
             
@@ -4028,6 +4108,8 @@
                     &lt;optional><br>
                 
 
+                
+                    &lt;nullable><br>
                 
 
                 
@@ -4049,7 +4131,7 @@
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
             
@@ -4061,6 +4143,8 @@
                     &lt;optional><br>
                 
 
+                
+                    &lt;nullable><br>
                 
 
                 
@@ -4325,6 +4409,654 @@
     <h5>Example</h5>
     
     <pre class="prettyprint"><code>fi.color('label', 'name', {...options if needed})</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".embed" data-heading-label=".embed" ><span class="type-signature">(static) </span>embed<span class="signature">(label, name, fields<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <h4 id="embed-fields-allow-the-user-to-add-a-url-from-an-oembed-enabled-site-or-paste-in-an-embed-code-from-another-site.">Embed fields allow the user to add a URL from an oEmbed-enabled site or paste in an embed code from another site.</h4>
+<p><code>only_content_tab</code></p>
+<p>Some parameters have <code>default</code> values, <code>OMIT</code> such parameters if you don't want to override them.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>label</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The text the content creator sees describing the field. May contain spaces.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Field/HubL variable name, which you'll reference when incorporating the field and its values in the module or theme. <code>Cannot contain spaces or special characters!</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>supported_source_types</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;('oembed'|'html')></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    all
+                
+                </td>
+            
+
+            <td class="description last"><p><code>all</code> Array of source types that are supported by the field.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>supported_oembed_types</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;('photo'|'video'|'link'|'rich')></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    all
+                
+                </td>
+            
+
+            <td class="description last"><p><code>all</code> Array of oEmbed types that are supported by the field.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resizable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> Whether the embed is resizable</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>show_preview</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> Whether the embed is previewable</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>supported_media_bridge_providers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Array of provider IDs that determine which Media Bridge providers are available to select content from.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>default</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Default object --&gt; It's generally a good idea to skip setting the <code>default</code> object, as it should be configured by the editor, not the developer</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>editor_options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#EDITOR_OPTIONS">EDITOR_OPTIONS</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Editor options group.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>display_conditions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Display conditions group.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>repeater_options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#REPEATER_OPTIONS">REPEATER_OPTIONS</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Repeater options. Keep <code>occurrence</code> object empty to just enable a feature. <code>repeater_options: {occurrence: {}}</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>repeater_options_default</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Repeater options with predefined repeated fields and <code>default</code> values for each field.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="content-tab-fields.js.html">content-tab-fields.js</a>, <a href="content-tab-fields.js.html#line233">line 233</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fi.embed('label', 'name', {...options if needed})</code></pre>
 
 
 
@@ -4605,7 +5337,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
             
@@ -4613,6 +5345,8 @@
 
             
                 <td class="attributes">
+                
+                    &lt;optional><br>
                 
 
                 
@@ -4774,6 +5508,8 @@
             
                 <td class="attributes">
                 
+                    &lt;optional><br>
+                
 
                 
 
@@ -4829,7 +5565,7 @@
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
             
@@ -4862,7 +5598,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
             
@@ -4874,6 +5610,8 @@
                     &lt;optional><br>
                 
 
+                
+                    &lt;nullable><br>
                 
 
                 
@@ -12116,6 +12854,578 @@
     <h5>Example</h5>
     
     <pre class="prettyprint"><code>fi.url('label', 'name', {...options if needed})</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".video" data-heading-label=".video" ><span class="type-signature">(static) </span>video<span class="signature">(label, name, fields<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <h4 id="video-fields-provide-content-editors-with-a-place-to-add-hubspot-video-to-their-module-content-without-the-need-of-using-rich-text-fields.">Video fields provide content editors with a place to add HubSpot Video to their module content without the need of using rich text fields.</h4>
+<p><code>only_content_tab</code></p>
+<p>Some parameters have <code>default</code> values, <code>OMIT</code> such parameters if you don't want to override them.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>label</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The text the content creator sees describing the field. May contain spaces.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Field/HubL variable name, which you'll reference when incorporating the field and its values in the module or theme. <code>Cannot contain spaces or special characters!</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>resizable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> Whether the video is resizable</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>show_preview</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> Whether the video is previewable</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>show_advanced_options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> Whether the video is advanced options</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>default</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Default object --&gt; It's generally a good idea to skip setting the <code>default</code> object, as it should be configured by the editor, not the developer</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>editor_options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#EDITOR_OPTIONS">EDITOR_OPTIONS</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Editor options group.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>display_conditions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Display conditions group.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>repeater_options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#REPEATER_OPTIONS">REPEATER_OPTIONS</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Repeater options. Keep <code>occurrence</code> object empty to just enable a feature. <code>repeater_options: {occurrence: {}}</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>repeater_options_default</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Repeater options with predefined repeated fields and <code>default</code> values for each field.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="content-tab-fields.js.html">content-tab-fields.js</a>, <a href="content-tab-fields.js.html#line199">line 199</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>fi.video('label', 'name', {...options if needed})</code></pre>
 
 
 
