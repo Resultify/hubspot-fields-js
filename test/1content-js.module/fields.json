@@ -2,14 +2,15 @@
   {
     "display": "toggle",
     "default": true,
-    "id": "boolean_field",
+    "id": "",
     "name": "boolean_field",
     "label": "Boolean",
     "type": "boolean",
     "display_width": null,
     "required": true,
     "locked": false,
-    "help_text": "tooltip"
+    "help_text": "tooltip",
+    "inherited_value": {}
   },
   {
     "multiple": false,
@@ -26,14 +27,15 @@
       ]
     ],
     "default": "value 1",
-    "id": "choice_field",
+    "id": "",
     "name": "choice_field",
     "label": "Choice",
     "type": "choice",
     "display_width": null,
     "required": false,
     "locked": true,
-    "inline_help_text": "Inline"
+    "inline_help_text": "Inline",
+    "inherited_value": {}
   },
   {
     "show_opacity": false,
@@ -41,18 +43,20 @@
       "color": "#FF0201",
       "opacity": null
     },
-    "id": "color_field",
+    "id": "",
     "name": "color_field",
     "label": "Color",
     "type": "color",
     "display_width": null,
     "required": false,
     "locked": false,
+    "inherited_value": {},
     "visibility": {
       "controlling_field_path": "boolean_field",
       "operator": "EQUAL",
       "controlling_value_regex": "true",
-      "property": null
+      "property": null,
+      "hidden_subfields": {}
     }
   },
   {
@@ -64,24 +68,26 @@
       "color": "#FF00FF",
       "variant": "600"
     },
-    "id": "font_field",
+    "id": "",
     "name": "font_field",
     "label": "Font",
     "type": "font",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "icon_set": "fontawesome-5.14.0",
     "default": {},
-    "id": "icon_field",
+    "id": "",
     "name": "icon_field",
     "label": "Icon",
     "type": "icon",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "responsive": true,
@@ -93,13 +99,14 @@
       "alt": null,
       "loading": "lazy"
     },
-    "id": "image_field",
+    "id": "",
     "name": "image_field",
     "label": "Image",
     "type": "image",
     "display_width": null,
     "required": false,
     "locked": false,
+    "inherited_value": {},
     "occurrence": {
       "max": 10,
       "min": null
@@ -126,13 +133,14 @@
       "open_in_new_tab": false,
       "no_follow": false
     },
-    "id": "link_field",
+    "id": "",
     "name": "link_field",
     "label": "Link",
     "type": "link",
     "display_width": null,
     "required": true,
     "locked": false,
+    "inherited_value": {},
     "occurrence": {
       "min": null,
       "max": null
@@ -143,13 +151,14 @@
     "step": 1,
     "max": 1000,
     "suffix": "%",
-    "id": "number_field",
+    "id": "",
     "name": "number_field",
     "label": "Number",
     "type": "number",
     "display_width": null,
     "required": false,
     "locked": false,
+    "inherited_value": {},
     "occurrence": {
       "min": 2,
       "default": 4,
@@ -159,13 +168,14 @@
   },
   {
     "default": "<h1>Default rich text</h1>",
-    "id": "richtext_field",
+    "id": "",
     "name": "richtext_field",
     "label": "Rich text",
     "type": "richtext",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "allow_new_line": false,
@@ -179,13 +189,14 @@
       "Default text",
       "Default text"
     ],
-    "id": "text_field",
+    "id": "",
     "name": "text_field",
     "label": "Text",
     "type": "text",
     "display_width": null,
     "required": false,
     "locked": false,
+    "inherited_value": {},
     "occurrence": {
       "default": 5,
       "min": null,
@@ -208,12 +219,13 @@
       "href": "",
       "type": "BLOG"
     },
-    "id": "url_field",
+    "id": "",
     "name": "url_field",
     "label": "URL",
     "type": "url",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   }
 ]

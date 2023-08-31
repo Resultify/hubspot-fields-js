@@ -1,7 +1,7 @@
 [
   {
     "type": "group",
-    "id": "group",
+    "id": "",
     "name": "group",
     "label": "Group",
     "children": [
@@ -9,17 +9,18 @@
         "allow_new_line": false,
         "show_emoji_picker": false,
         "validation_regex": "",
-        "id": "group.text_field",
+        "id": "",
         "name": "text_field",
         "label": "Text",
         "type": "text",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "type": "group",
-        "id": "group.group2",
+        "id": "",
         "name": "group2",
         "label": "Group2",
         "children": [
@@ -27,24 +28,27 @@
             "allow_new_line": false,
             "show_emoji_picker": false,
             "validation_regex": "",
-            "id": "group.group2.text_field",
+            "id": "",
             "name": "text_field",
             "label": "Text",
             "type": "text",
             "display_width": null,
             "required": false,
-            "locked": false
+            "locked": false,
+            "inherited_value": {}
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   }
 ]

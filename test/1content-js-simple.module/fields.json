@@ -2,13 +2,14 @@
   {
     "display": "checkbox",
     "default": false,
-    "id": "boolean_field",
+    "id": "",
     "name": "boolean_field",
     "label": "Boolean",
     "type": "boolean",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "multiple": false,
@@ -24,48 +25,52 @@
         "Label 2"
       ]
     ],
-    "id": "choice_field",
+    "id": "",
     "name": "choice_field",
     "label": "Choice",
     "type": "choice",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "default": {
       "color": null,
       "opacity": null
     },
-    "id": "color_field",
+    "id": "",
     "name": "color_field",
     "label": "Color",
     "type": "color",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "load_external_fonts": true,
     "default": {},
-    "id": "font_field",
+    "id": "",
     "name": "font_field",
     "label": "Font",
     "type": "font",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "icon_set": "fontawesome-5.14.0",
     "default": {},
-    "id": "icon_field",
+    "id": "",
     "name": "icon_field",
     "label": "Icon",
     "type": "icon",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "responsive": true,
@@ -77,13 +82,14 @@
       "alt": null,
       "loading": "lazy"
     },
-    "id": "image_field",
+    "id": "",
     "name": "image_field",
     "label": "Image",
     "type": "image",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "show_advanced_rel_options": false,
@@ -106,45 +112,49 @@
       "open_in_new_tab": false,
       "no_follow": false
     },
-    "id": "link_field",
+    "id": "",
     "name": "link_field",
     "label": "Link",
     "type": "link",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "display": "text",
     "step": 1,
-    "id": "number_field",
+    "id": "",
     "name": "number_field",
     "label": "Number",
     "type": "number",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
-    "id": "richtext_field",
+    "id": "",
     "name": "richtext_field",
     "label": "Rich text",
     "type": "richtext",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "allow_new_line": false,
     "show_emoji_picker": false,
     "validation_regex": "",
-    "id": "text_field",
+    "id": "",
     "name": "text_field",
     "label": "Text",
     "type": "text",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   },
   {
     "supported_types": [
@@ -162,12 +172,13 @@
       "href": "",
       "type": "EXTERNAL"
     },
-    "id": "url_field",
+    "id": "",
     "name": "url_field",
     "label": "URL",
     "type": "url",
     "display_width": null,
     "required": false,
-    "locked": false
+    "locked": false,
+    "inherited_value": {}
   }
 ]

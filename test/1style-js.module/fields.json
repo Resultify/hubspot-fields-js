@@ -11,13 +11,14 @@
           "horizontal_align": "RIGHT",
           "vertical_align": "BOTTOM"
         },
-        "id": "style.alignment_field",
+        "id": "",
         "name": "alignment_field",
         "label": "Alignment",
         "type": "alignment",
         "display_width": null,
         "required": true,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "default": {
@@ -25,25 +26,27 @@
           "background_position": "MIDDLE_CENTER",
           "background_size": "cover"
         },
-        "id": "style.backgroundimage_field",
+        "id": "",
         "name": "backgroundimage_field",
         "label": "Background image",
         "type": "backgroundimage",
         "display_width": null,
         "required": false,
         "locked": false,
-        "inline_help_text": "Inline"
+        "inline_help_text": "Inline",
+        "inherited_value": {}
       },
       {
         "display": "checkbox",
         "default": true,
-        "id": "style.boolean_field",
+        "id": "",
         "name": "boolean_field",
         "label": "Boolean",
         "type": "boolean",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "allow_custom_border_sides": true,
@@ -76,13 +79,14 @@
             }
           }
         },
-        "id": "style.border_field",
+        "id": "",
         "name": "border_field",
         "label": "Border",
         "type": "border",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "multiple": false,
@@ -98,31 +102,34 @@
             "Label 2"
           ]
         ],
-        "id": "style.choice_field",
+        "id": "",
         "name": "choice_field",
         "label": "Choice",
         "type": "choice",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "default": {
           "color": null,
           "opacity": null
         },
-        "id": "style.color_field",
+        "id": "",
         "name": "color_field",
         "label": "Color",
         "type": "color",
         "display_width": null,
         "required": false,
         "locked": false,
+        "inherited_value": {},
         "visibility": {
           "controlling_field_path": "style.number_field",
           "operator": "NOT_EMPTY",
           "controlling_value_regex": null,
-          "property": null
+          "property": null,
+          "hidden_subfields": {}
         }
       },
       {
@@ -135,13 +142,14 @@
             "font-style": "italic"
           }
         },
-        "id": "style.font_field",
+        "id": "",
         "name": "font_field",
         "label": "Font",
         "type": "font",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "default": {
@@ -168,25 +176,27 @@
             }
           ]
         },
-        "id": "style.gradient_field",
+        "id": "",
         "name": "gradient_field",
         "label": "Gradient",
         "type": "gradient",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "icon_set": "fontawesome-5.14.0",
         "default": {},
-        "id": "style.icon_field",
+        "id": "",
         "name": "icon_field",
         "label": "Icon",
         "type": "icon",
         "display_width": null,
         "required": false,
         "locked": true,
-        "help_text": "Tooltip"
+        "help_text": "Tooltip",
+        "inherited_value": {}
       },
       {
         "responsive": true,
@@ -198,27 +208,29 @@
           "alt": null,
           "loading": "lazy"
         },
-        "id": "style.image_field",
+        "id": "",
         "name": "image_field",
         "label": "Image",
         "type": "image",
         "display_width": null,
         "required": false,
         "locked": false,
-        "inline_help_text": "Inline"
+        "inline_help_text": "Inline",
+        "inherited_value": {}
       },
       {
         "display": "text",
         "step": 5,
         "max": 100,
         "suffix": "px",
-        "id": "style.number_field",
+        "id": "",
         "name": "number_field",
         "label": "Number",
         "type": "number",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "default": {
@@ -235,30 +247,33 @@
             }
           }
         },
-        "id": "style.spacing_field",
+        "id": "",
         "name": "spacing_field",
         "label": "Spacing",
         "type": "spacing",
         "display_width": null,
         "required": false,
-        "locked": false
+        "locked": false,
+        "inherited_value": {}
       },
       {
         "default": {
           "text_align": "JUSTIFY"
         },
-        "id": "style.textalignment_field",
+        "id": "",
         "name": "textalignment_field",
         "label": "Text alignment",
         "type": "textalignment",
         "display_width": null,
         "required": false,
         "locked": false,
+        "inherited_value": {},
         "visibility": {
           "controlling_field_path": "style.color_field",
           "operator": "EQUAL",
           "property": "color",
-          "controlling_value_regex": "#FFFFFF"
+          "controlling_value_regex": "#FFFFFF",
+          "hidden_subfields": {}
         }
       }
     ],
