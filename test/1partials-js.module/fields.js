@@ -11,6 +11,7 @@ import { pa } from '../../partials/all.js'
 writeJson(init(
   fi.text('Text', 'text', { allow_new_line: true }),
   group('Group2', 'group2', {},
+    pa.buttonGroup,
     fi.text('Text', 'text_field')
   ),
   pa.buttonGroup,
@@ -33,5 +34,3 @@ writeJson(init(
   pa.textStyle,
   pa.textStyle2
 ))
-
-// console.log(pa.imageGroup)

@@ -52,5 +52,5 @@ const buttonGroup = [
   )
 
 ]
-// console.log(buttonGroup)
+
 export { buttonGroup }

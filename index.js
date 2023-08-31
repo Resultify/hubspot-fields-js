@@ -21,7 +21,9 @@ import {
   text,
   link,
   richtext,
-  url
+  url,
+  video,
+  embed
 } from './lib/content-tab-fields.js'
 
 /**
@@ -46,7 +48,9 @@ const moduleFields = {
   gradient,
   backgroundimage,
   border,
-  textalignment
+  textalignment,
+  video,
+  embed
 }
 /**
  * #### Theme fields entry point
