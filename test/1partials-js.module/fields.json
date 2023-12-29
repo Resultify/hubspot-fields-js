@@ -10,7 +10,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -35,7 +35,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "show_advanced_rel_options": false,
@@ -65,7 +65,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "allow_new_line": false,
@@ -80,7 +80,7 @@
             "required": false,
             "locked": false,
             "help_text": "If the link title is added at the end of repeated blocks of text, for example “Read more” links at the end of short teasers for blog posts, then you can provide more descriptive link text specifically for screen reader users using Accessible link label. It will be visually hidden for a normal view.",
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "display": "checkbox",
@@ -93,7 +93,7 @@
             "required": false,
             "locked": false,
             "help_text": "Accessible link. Inform when a link opens a new window.",
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "type": "group",
@@ -111,7 +111,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "multiple": false,
@@ -135,7 +135,7 @@
                 "display_width": null,
                 "required": true,
                 "locked": false,
-                "inherited_value": {},
+                "inherited_value": null,
                 "visibility": {
                   "controlling_field_path": "button.icon.icon",
                   "operator": "NOT_EMPTY",
@@ -149,7 +149,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "button.text",
               "operator": "NOT_EMPTY",
@@ -163,7 +163,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "allow_new_line": false,
@@ -176,14 +176,14 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -202,7 +202,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "show_advanced_rel_options": false,
@@ -232,7 +232,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "allow_new_line": false,
@@ -247,7 +247,7 @@
         "required": false,
         "locked": false,
         "help_text": "If the link title is added at the end of repeated blocks of text, for example “Read more” links at the end of short teasers for blog posts, then you can provide more descriptive link text specifically for screen reader users using Accessible link label. It will be visually hidden for a normal view.",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "checkbox",
@@ -260,7 +260,7 @@
         "required": false,
         "locked": false,
         "help_text": "Accessible link. Inform when a link opens a new window.",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -278,7 +278,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -302,7 +302,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "button.icon.icon",
               "operator": "NOT_EMPTY",
@@ -316,7 +316,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "button.text",
           "operator": "NOT_EMPTY",
@@ -330,7 +330,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "allow_new_line": true,
@@ -343,7 +343,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -362,7 +362,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "multiple": false,
@@ -403,7 +403,7 @@
         "required": false,
         "locked": false,
         "help_text": "Semantic heading tag (h1-h6)",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "multiple": false,
@@ -468,7 +468,7 @@
         "locked": false,
         "help_text": "Display different heading styles not related to semantic heading type (tag h1-h6)",
         "inline_help_text": "Display different heading style",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -504,7 +504,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "display": "checkbox",
@@ -517,14 +517,14 @@
             "required": false,
             "locked": false,
             "help_text": "Accessible link. Inform when a link opens a new window.",
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "heading.text",
           "operator": "NOT_EMPTY",
@@ -549,7 +549,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -573,7 +573,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "heading.icon.icon",
               "operator": "NOT_EMPTY",
@@ -611,7 +611,7 @@
                 "required": true,
                 "locked": false,
                 "help_text": "Categorize the purpose of this icon for screen readers. <a href='https://www.w3.org/WAI/tutorials/images/' target='blank' rel='noopener noreferrer'>Learn More</a>",
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "allow_new_line": false,
@@ -625,7 +625,7 @@
                 "required": false,
                 "locked": false,
                 "help_text": "This text will be read by screen readers to describe the icon.",
-                "inherited_value": {},
+                "inherited_value": null,
                 "visibility": {
                   "controlling_field_path": "heading.icon.accessibility_options.purpose",
                   "operator": "EQUAL",
@@ -639,7 +639,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "heading.icon.icon",
               "operator": "NOT_EMPTY",
@@ -653,7 +653,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "heading.text",
           "operator": "NOT_EMPTY",
@@ -667,7 +667,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -693,14 +693,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -717,14 +717,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -744,14 +744,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -768,7 +768,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "default": {
@@ -782,7 +782,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
@@ -790,7 +790,7 @@
         "required": false,
         "locked": false,
         "help_text": "Override global theme settings for the current component",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -813,7 +813,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "default": {
@@ -827,7 +827,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "default": {
@@ -841,7 +841,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "allow_custom_border_sides": false,
@@ -853,7 +853,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "display": "text",
@@ -868,7 +868,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "display": "text",
@@ -883,7 +883,7 @@
                 "display_width": null,
                 "required": false,
                 "locked": false,
-                "inherited_value": {}
+                "inherited_value": null
               }
             ],
             "expanded": false,
@@ -891,21 +891,21 @@
             "required": false,
             "locked": false,
             "help_text": "Override global theme settings for the current component",
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "visibility": {
       "controlling_field_path": "heading.text",
       "operator": "NOT_EMPTY",
@@ -924,7 +924,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -942,7 +942,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -973,7 +973,7 @@
             "required": false,
             "locked": false,
             "help_text": "Categorize the purpose of this icon for screen readers. <a href='https://www.w3.org/WAI/tutorials/images/' target='blank' rel='noopener noreferrer'>Learn More</a>",
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "allow_new_line": false,
@@ -987,7 +987,7 @@
             "required": false,
             "locked": false,
             "help_text": "This text will be read by screen readers to describe the icon.",
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "icon.accessibility_options.purpose",
               "operator": "EQUAL",
@@ -1001,7 +1001,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "icon.icon",
           "operator": "NOT_EMPTY",
@@ -1015,7 +1015,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1051,7 +1051,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -1079,7 +1079,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -1103,14 +1103,14 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1130,14 +1130,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1154,14 +1154,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1181,14 +1181,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1205,7 +1205,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "default": {
@@ -1219,7 +1219,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "default": {
@@ -1233,7 +1233,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "allow_custom_border_sides": false,
@@ -1245,7 +1245,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "display": "text",
@@ -1260,7 +1260,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "display": "text",
@@ -1275,7 +1275,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
@@ -1283,14 +1283,14 @@
         "required": false,
         "locked": false,
         "help_text": "Override global theme settings for the current component",
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "visibility": {
       "controlling_field_path": "icon.icon",
       "operator": "NOT_EMPTY",
@@ -1316,7 +1316,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1341,7 +1341,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1381,14 +1381,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "image.image",
           "operator": "NOT_EMPTY",
@@ -1431,14 +1431,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "image.image",
           "operator": "NOT_EMPTY",
@@ -1452,7 +1452,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1471,7 +1471,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "show_advanced_rel_options": false,
@@ -1501,7 +1501,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "checkbox",
@@ -1514,7 +1514,7 @@
         "required": false,
         "locked": false,
         "help_text": "Accessible link. Inform when a link opens a new window.",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1532,7 +1532,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -1556,7 +1556,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "link.icon.icon",
               "operator": "NOT_EMPTY",
@@ -1570,7 +1570,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "link.text",
           "operator": "NOT_EMPTY",
@@ -1584,7 +1584,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1634,7 +1634,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "text",
@@ -1647,7 +1647,7 @@
         "required": false,
         "locked": false,
         "help_text": "Number of characters to truncate the text",
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "richtext.rich_text",
           "operator": "NOT_EMPTY",
@@ -1661,7 +1661,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1680,7 +1680,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "show_advanced_rel_options": false,
@@ -1710,7 +1710,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "allow_new_line": false,
@@ -1725,7 +1725,7 @@
         "required": false,
         "locked": false,
         "help_text": "If the link title is added at the end of repeated blocks of text, for example “Read more” links at the end of short teasers for blog posts, then you can provide more descriptive link text specifically for screen reader users using Accessible link label. It will be visually hidden for a normal view.",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "checkbox",
@@ -1738,7 +1738,7 @@
         "required": false,
         "locked": false,
         "help_text": "Accessible link. Inform when a link opens a new window.",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1756,7 +1756,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -1780,7 +1780,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "secondary_button.icon.icon",
               "operator": "NOT_EMPTY",
@@ -1794,7 +1794,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "secondary_button.text",
           "operator": "NOT_EMPTY",
@@ -1808,7 +1808,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1827,7 +1827,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "show_advanced_rel_options": false,
@@ -1857,7 +1857,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "checkbox",
@@ -1870,7 +1870,7 @@
         "required": false,
         "locked": false,
         "help_text": "Accessible link. Inform when a link opens a new window.",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -1888,7 +1888,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -1912,7 +1912,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "secondary_link.icon.icon",
               "operator": "NOT_EMPTY",
@@ -1926,7 +1926,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "secondary_link.text",
           "operator": "NOT_EMPTY",
@@ -1940,7 +1940,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "allow_new_line": true,
@@ -1953,7 +1953,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -1972,7 +1972,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "multiple": false,
@@ -2013,7 +2013,7 @@
         "required": false,
         "locked": false,
         "help_text": "Semantic heading tag (h1-h6)",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "multiple": false,
@@ -2078,7 +2078,7 @@
         "locked": false,
         "help_text": "Display different heading styles not related to semantic heading type (tag h1-h6)",
         "inline_help_text": "Display different heading style",
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -2114,7 +2114,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "display": "checkbox",
@@ -2127,14 +2127,14 @@
             "required": false,
             "locked": false,
             "help_text": "Accessible link. Inform when a link opens a new window.",
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "subheading.text",
           "operator": "NOT_EMPTY",
@@ -2159,7 +2159,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "multiple": false,
@@ -2183,7 +2183,7 @@
             "display_width": null,
             "required": true,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "subheading.icon.icon",
               "operator": "NOT_EMPTY",
@@ -2221,7 +2221,7 @@
                 "required": true,
                 "locked": false,
                 "help_text": "Categorize the purpose of this icon for screen readers. <a href='https://www.w3.org/WAI/tutorials/images/' target='blank' rel='noopener noreferrer'>Learn More</a>",
-                "inherited_value": {}
+                "inherited_value": null
               },
               {
                 "allow_new_line": false,
@@ -2235,7 +2235,7 @@
                 "required": false,
                 "locked": false,
                 "help_text": "This text will be read by screen readers to describe the icon.",
-                "inherited_value": {},
+                "inherited_value": null,
                 "visibility": {
                   "controlling_field_path": "heading.icon.accessibility_options.purpose",
                   "operator": "EQUAL",
@@ -2249,7 +2249,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {},
+            "inherited_value": null,
             "visibility": {
               "controlling_field_path": "subheading.icon.icon",
               "operator": "NOT_EMPTY",
@@ -2263,7 +2263,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {},
+        "inherited_value": null,
         "visibility": {
           "controlling_field_path": "subheading.text",
           "operator": "NOT_EMPTY",
@@ -2277,7 +2277,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "allow_new_line": true,
@@ -2290,7 +2290,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2309,14 +2309,14 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2350,14 +2350,14 @@
         "required": false,
         "locked": false,
         "help_text": "Custom presets to globally restyle module",
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2377,14 +2377,14 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2401,14 +2401,14 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2428,14 +2428,14 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2452,7 +2452,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "default": {
@@ -2466,7 +2466,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "load_external_fonts": true,
@@ -2478,7 +2478,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
@@ -2486,7 +2486,7 @@
     "required": false,
     "locked": false,
     "help_text": "Override global theme settings for the current component",
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "type": "group",
@@ -2512,14 +2512,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -2536,14 +2536,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -2563,14 +2563,14 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -2587,7 +2587,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "default": {
@@ -2601,7 +2601,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           },
           {
             "load_external_fonts": true,
@@ -2613,7 +2613,7 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
@@ -2621,14 +2621,14 @@
         "required": false,
         "locked": false,
         "help_text": "Override global theme settings for the current component",
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "visibility": {
       "controlling_field_path": "text.text",
       "operator": "NOT_EMPTY",

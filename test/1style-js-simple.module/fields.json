@@ -17,7 +17,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "default": {
@@ -32,7 +32,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "checkbox",
@@ -44,7 +44,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "allow_custom_border_sides": false,
@@ -56,7 +56,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "multiple": false,
@@ -79,7 +79,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "default": {
@@ -93,7 +93,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "load_external_fonts": true,
@@ -105,7 +105,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "default": {},
@@ -116,7 +116,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "icon_set": "fontawesome-5.14.0",
@@ -128,7 +128,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "responsive": true,
@@ -147,7 +147,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "display": "text",
@@ -159,7 +159,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "default": {},
@@ -170,7 +170,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "default": {
@@ -183,7 +183,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "tab": "STYLE",
