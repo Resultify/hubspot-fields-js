@@ -102,7 +102,7 @@
             "label": "Icon",
             "children": [
               {
-                "icon_set": "fontawesome-5.14.0",
+                "icon_set": "fontawesome-6.4.2",
                 "default": {},
                 "id": "",
                 "name": "icon",
@@ -269,7 +269,7 @@
         "label": "Icon",
         "children": [
           {
-            "icon_set": "fontawesome-5.14.0",
+            "icon_set": "fontawesome-6.4.2",
             "default": {},
             "id": "",
             "name": "icon",
@@ -540,7 +540,7 @@
         "label": "Icon",
         "children": [
           {
-            "icon_set": "fontawesome-5.14.0",
+            "icon_set": "fontawesome-6.4.2",
             "default": {},
             "id": "",
             "name": "icon",
@@ -915,7 +915,7 @@
     }
   },
   {
-    "icon_set": "fontawesome-5.14.0",
+    "icon_set": "fontawesome-6.4.2",
     "default": {},
     "id": "",
     "name": "icon",
@@ -933,7 +933,7 @@
     "label": "Icon",
     "children": [
       {
-        "icon_set": "fontawesome-5.14.0",
+        "icon_set": "fontawesome-6.4.2",
         "default": {},
         "id": "",
         "name": "icon",
@@ -1523,7 +1523,7 @@
         "label": "Icon",
         "children": [
           {
-            "icon_set": "fontawesome-5.14.0",
+            "icon_set": "fontawesome-6.4.2",
             "default": {},
             "id": "",
             "name": "icon",
@@ -1747,7 +1747,7 @@
         "label": "Icon",
         "children": [
           {
-            "icon_set": "fontawesome-5.14.0",
+            "icon_set": "fontawesome-6.4.2",
             "default": {},
             "id": "",
             "name": "icon",
@@ -1879,7 +1879,7 @@
         "label": "Icon",
         "children": [
           {
-            "icon_set": "fontawesome-5.14.0",
+            "icon_set": "fontawesome-6.4.2",
             "default": {},
             "id": "",
             "name": "icon",
@@ -2150,7 +2150,7 @@
         "label": "Icon",
         "children": [
           {
-            "icon_set": "fontawesome-5.14.0",
+            "icon_set": "fontawesome-6.4.2",
             "default": {},
             "id": "",
             "name": "icon",
