@@ -1,3 +1,30 @@
+### v0.0.2 `April 11, 2024`
+* **[TASK]** refactor,  add CTA fields (#2) [`6da4454`](https://github.com/Resultify/hubspot-fields-js/commit/6da4454) (Dmytro Hrynevych)
+* **[TASK]** add 30m timeout for all github actions [`9bb819d`](https://github.com/Resultify/hubspot-fields-js/commit/9bb819d) (dmh)
+* **[TASK]** add quick-release config [`bc57baf`](https://github.com/Resultify/hubspot-fields-js/commit/bc57baf) (dmh)
+* **[TASK]** add video and embed fields, add NESTED_COMMON_FIELDS types, more typings [`017a6d5`](https://github.com/Resultify/hubspot-fields-js/commit/017a6d5) (dmh)
+* **[DOC]** update syntax for fields.js in readme code examples [`5dfaf16`](https://github.com/Resultify/hubspot-fields-js/commit/5dfaf16) (dmh)
+* **[DOC]** update jsdoc documentation [`ed147e8`](https://github.com/Resultify/hubspot-fields-js/commit/ed147e8) (dmh)
+* **[TASK]** add build docs scripts [`2b2a186`](https://github.com/Resultify/hubspot-fields-js/commit/2b2a186) (dmh)
+* **[TASK]** use types folder for global jsdoc types [`a7737b9`](https://github.com/Resultify/hubspot-fields-js/commit/a7737b9) (dmh)
+* **[DOC]** update docs, use modern-jsdoc-template [`e15c744`](https://github.com/Resultify/hubspot-fields-js/commit/e15c744) (dmh)
+* **[TEST]** add test for partials [`d3afaa8`](https://github.com/Resultify/hubspot-fields-js/commit/d3afaa8) (dmh)
+* **[TASK]** update partials to use index.js, separate partials from main part [`8251f5d`](https://github.com/Resultify/hubspot-fields-js/commit/8251f5d) (dmh)
+* **[TEST]** update tests, add content group to test [`35000fe`](https://github.com/Resultify/hubspot-fields-js/commit/35000fe) (dmh)
+* **[TASK]** one entry point index.js, theme fields,  separate fields init and write to JSON, one global COMMON_FIELDS [`3af5881`](https://github.com/Resultify/hubspot-fields-js/commit/3af5881) (dmh)
+* **[DOC]** update readme file [`b15d281`](https://github.com/Resultify/hubspot-fields-js/commit/b15d281) (dmh)
+* **[DOC]** update license [`3639a32`](https://github.com/Resultify/hubspot-fields-js/commit/3639a32) (dmh)
+* **[TASK]** update jsdoc types and ignore some types to show in documentation [`292dd8d`](https://github.com/Resultify/hubspot-fields-js/commit/292dd8d) (dmh)
+* **[DOC]** add screenshots to readme with code completion and documentation examples in code editor [`3b1a672`](https://github.com/Resultify/hubspot-fields-js/commit/3b1a672) (Dmytro Hrynevych)
+* **[DOC]** disable date in jsdoc template footer [`31f998e`](https://github.com/Resultify/hubspot-fields-js/commit/31f998e) (dmh)
+* **[DOC]** add documentation [`97bd92e`](https://github.com/Resultify/hubspot-fields-js/commit/97bd92e) (dmh)
+* **[TASK]** use docs folder for documentation, disable Jekyll, update readme [`9ab7675`](https://github.com/Resultify/hubspot-fields-js/commit/9ab7675) (dmh)
+* **[TASK]** add jsdoc config to generate documentation, update npm deps [`b220ed0`](https://github.com/Resultify/hubspot-fields-js/commit/b220ed0) (dmh)
+* **[DOC]** update jsdoc comments [`d11b7d3`](https://github.com/Resultify/hubspot-fields-js/commit/d11b7d3) (dmh)
+* **[TASK]** update jsdoc syntax to add possibility to generate documentation [`f90088e`](https://github.com/Resultify/hubspot-fields-js/commit/f90088e) (dmh)
+
+***
+
 
 #### v0.0.1 `April 27, 2023`
 
