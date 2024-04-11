@@ -23,7 +23,8 @@ import {
   richtext,
   url,
   video,
-  embed
+  embed,
+  cta
 } from './lib/content-tab-fields.js'
 
 /**
@@ -50,7 +51,8 @@ const moduleFields = {
   border,
   textalignment,
   video,
-  embed
+  embed,
+  cta
 }
 /**
  * #### Theme fields entry point

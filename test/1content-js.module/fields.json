@@ -10,7 +10,7 @@
     "required": true,
     "locked": false,
     "help_text": "tooltip",
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "multiple": false,
@@ -35,7 +35,7 @@
     "required": false,
     "locked": true,
     "inline_help_text": "Inline",
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "show_opacity": false,
@@ -50,7 +50,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "visibility": {
       "controlling_field_path": "boolean_field",
       "operator": "EQUAL",
@@ -75,10 +75,10 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
-    "icon_set": "fontawesome-5.14.0",
+    "icon_set": "fontawesome-6.4.2",
     "default": {},
     "id": "",
     "name": "icon_field",
@@ -87,7 +87,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "responsive": true,
@@ -106,7 +106,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "occurrence": {
       "max": 10,
       "min": null
@@ -140,7 +140,7 @@
     "display_width": null,
     "required": true,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "occurrence": {
       "min": null,
       "max": null
@@ -158,7 +158,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "occurrence": {
       "min": 2,
       "default": 4,
@@ -175,7 +175,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   },
   {
     "allow_new_line": false,
@@ -196,7 +196,7 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {},
+    "inherited_value": null,
     "occurrence": {
       "default": 5,
       "min": null,
@@ -226,6 +226,6 @@
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   }
 ]

@@ -16,7 +16,7 @@
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       },
       {
         "type": "group",
@@ -35,20 +35,20 @@
             "display_width": null,
             "required": false,
             "locked": false,
-            "inherited_value": {}
+            "inherited_value": null
           }
         ],
         "expanded": false,
         "display_width": null,
         "required": false,
         "locked": false,
-        "inherited_value": {}
+        "inherited_value": null
       }
     ],
     "expanded": false,
     "display_width": null,
     "required": false,
     "locked": false,
-    "inherited_value": {}
+    "inherited_value": null
   }
 ]
