@@ -1,6 +1,6 @@
 {
   "name": "@resultify/hubspot-fields-js",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Resultify HubSpot fields.js to fields.json compiler",
   "keywords": [
     "hubspot",

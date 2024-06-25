@@ -1,3 +1,9 @@
+### v1.0.0 `June 25, 2024`
+* **[TEST]** update github actions tests [`0acd46e`](https://github.com/Resultify/hubspot-fields-js/commit/0acd46e) (dmh)
+* **[TASK]** general refactor, use fields types from hubspot react modules (#3) [`f6047e8`](https://github.com/Resultify/hubspot-fields-js/commit/f6047e8) (Dmytro Hrynevych)
+
+***
+
 ### v0.0.2 `April 11, 2024`
 * **[TASK]** refactor,  add CTA fields (#2) [`6da4454`](https://github.com/Resultify/hubspot-fields-js/commit/6da4454) (Dmytro Hrynevych)
 * **[TASK]** add 30m timeout for all github actions [`9bb819d`](https://github.com/Resultify/hubspot-fields-js/commit/9bb819d) (dmh)
