@@ -31,29 +31,24 @@
     "url": "https://github.com/Resultify/hubspot-fields-js.git"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "standardJs": "standard -v 'lib/**/*.js'",
     "checkJs": "tsc -p jsconfig.json --maxNodeModuleJsDepth 0",
-    "test1": "node test/1content-js-simple.module/fields.js",
-    "test2": "node test/1content-js.module/fields.js",
-    "test3": "node test/1contentgroup-js-simple.module/fields.js",
-    "test4": "node test/1style-js-simple.module/fields.js",
-    "test5": "node test/1style-js.module/fields.js",
-    "test6": "node test/1partials-js.module/fields.js",
+    "test1": "node test/all-fields.module/fields.js",
     "testDiff": "git diff --exit-code -- test/**/*.json",
-    "testAllFiles": "npm run test1 && npm run test2 && npm run test3 && npm run test4 && npm run test5 && npm run test6",
+    "testAllFiles": "npm run test1",
     "test": "npm run standardJs && npm run checkJs && npm run testAllFiles && npm run testDiff",
     "docs": "node build/docs.exec.mjs"
   },
   "devDependencies": {
-    "@types/node": "~20.3.1",
-    "del": "~7.0.0",
-    "execa": "~7.1.1",
-    "husky": "~8.0.1",
+    "@types/node": "~20.12.7",
+    "del": "~7.1.0",
+    "execa": "~8.0.1",
+    "husky": "~9.0.11",
     "jsdoc": "~4.0.2",
     "modern-jsdoc-template": "~1.0.0",
     "standard": "~17.1.0",
-    "typescript": "~5.1.3"
+    "typescript": "~5.4.5"
   },
   "engines": {
     "node": ">=16.20",

@@ -1,0 +1,226 @@
+[
+  {
+    "label": "Audio Player",
+    "name": "audioplayer",
+    "type": "audioplayer"
+  },
+  {
+    "label": "Blog",
+    "name": "blog",
+    "type": "blog"
+  },
+  {
+    "label": "Boolean",
+    "name": "boolean",
+    "type": "boolean"
+  },
+  {
+    "label": "Choices",
+    "name": "choices",
+    "type": "choice"
+  },
+  {
+    "label": "Date",
+    "name": "date",
+    "type": "date"
+  },
+  {
+    "label": "Datetime",
+    "name": "datetime",
+    "type": "datetime"
+  },
+  {
+    "label": "Email",
+    "name": "email",
+    "type": "email"
+  },
+  {
+    "label": "Embed",
+    "name": "embed",
+    "type": "embed"
+  },
+  {
+    "label": "File",
+    "name": "file",
+    "type": "file"
+  },
+  {
+    "label": "Font",
+    "name": "font",
+    "type": "font"
+  },
+  {
+    "label": "Form",
+    "name": "form",
+    "type": "form"
+  },
+  {
+    "label": "HTML",
+    "name": "html",
+    "type": "html"
+  },
+  {
+    "label": "CRM Object",
+    "name": "crmobject",
+    "object_type": "COMPANY",
+    "type": "crmobject"
+  },
+  {
+    "label": "CRM Object Property",
+    "name": "crmobjectproperty",
+    "object_type": "COMPANY",
+    "type": "crmobjectproperty"
+  },
+  {
+    "label": "CTA",
+    "name": "cta",
+    "type": "cta"
+  },
+  {
+    "label": "HubL",
+    "name": "hubl",
+    "type": "hubl"
+  },
+  {
+    "label": "HubDB Table",
+    "name": "hubdbtable",
+    "type": "hubdbtable"
+  },
+  {
+    "label": "Icon",
+    "name": "icon",
+    "type": "icon"
+  },
+  {
+    "label": "Image",
+    "name": "image",
+    "type": "image"
+  },
+  {
+    "label": "Link",
+    "name": "link",
+    "type": "link"
+  },
+  {
+    "label": "Logo",
+    "name": "logo",
+    "type": "logo"
+  },
+  {
+    "label": "Meeting",
+    "name": "meeting",
+    "type": "meeting"
+  },
+  {
+    "label": "Menu",
+    "name": "menu",
+    "type": "menu"
+  },
+  {
+    "label": "Number",
+    "name": "number",
+    "type": "number"
+  },
+  {
+    "label": "Page",
+    "name": "page",
+    "type": "page"
+  },
+  {
+    "label": "Payment",
+    "name": "payment",
+    "type": "payment"
+  },
+  {
+    "label": "Podcast",
+    "name": "podcast",
+    "type": "podcast"
+  },
+  {
+    "label": "Rich Text",
+    "name": "richtext",
+    "type": "richtext"
+  },
+  {
+    "label": "Simple Menu",
+    "name": "simplemenu",
+    "type": "simplemenu"
+  },
+  {
+    "label": "Group",
+    "name": "group",
+    "type": "group",
+    "children": [
+      {
+        "label": "Tag",
+        "name": "tag",
+        "type": "tag"
+      },
+      {
+        "label": "Text",
+        "name": "text",
+        "type": "text"
+      },
+      {
+        "label": "URL",
+        "name": "url",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "label": "Group2",
+    "name": "group2",
+    "type": "group",
+    "children": [
+      {
+        "label": "Video",
+        "name": "video",
+        "type": "videoplayer"
+      }
+    ]
+  },
+  {
+    "name": "style",
+    "label": "Style",
+    "children": [
+      {
+        "label": "Aligment",
+        "name": "alignment",
+        "type": "alignment"
+      },
+      {
+        "label": "Color",
+        "name": "color",
+        "type": "color"
+      },
+      {
+        "label": "Background Image",
+        "name": "backgroundimage",
+        "type": "backgroundimage"
+      },
+      {
+        "label": "Border",
+        "name": "border",
+        "type": "border"
+      },
+      {
+        "label": "Gradient",
+        "name": "gradient",
+        "type": "gradient"
+      },
+      {
+        "label": "Spacing",
+        "name": "spacing",
+        "type": "spacing"
+      },
+      {
+        "label": "Text Alignment",
+        "name": "textalignment",
+        "type": "textalignment"
+      }
+    ],
+    "tab": "STYLE",
+    "type": "group"
+  }
+]
