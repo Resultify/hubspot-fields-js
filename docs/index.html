@@ -117,100 +117,91 @@
 <li>Upload module to HubSpot</li>
 </ol>
 <h2 id="field.js-structure"><code>field.js</code> structure</h2>
-<p>Each field or group with some exceptions consists of:</p>
+<p>Each field or group consists of:</p>
 <ul>
 <li>Label</li>
 <li>Name</li>
-<li>Content options (unique options per field)</li>
-<li>Editor options</li>
-<li>Display conditions</li>
-<li>Repeater options</li>
+<li>Parameters based on the HubSpot fields documentation</li>
 </ul>
 <pre class="prettyprint source lang-js"><code>import {
   group,
   styleGroup,
   init,
-  writeJson,
   moduleFields as fi
 } from '@resultify/hubspot-fields-js'
 
-writeJson(init( //initialize module and write to JSON (fields.json)
-    fi.text( // add text field
-        'Text', // label
-        'text', // name
-        {
-            // content options (unique options per field)
-            editor_options: {} // editor options
-            display_conditions: {} // display conditions
-            repeater_options: {} // repeater options
-        }
-    )
-))
+init( // initialize module and write to JSON (fields.json)
+  fi.text( // add text field
+    'Text', // label
+    'text', // name
+    {
+      help_text: 'Help text',
+      display_width: 'half_width',
+      allow_new_line: true
+      // ...all other parameters based on the HubSpot fields documentation
+    }
+  ),
+  styleGroup(
+    fi.color('Text color', 'text_color')
+  )
+)
 </code></pre>
 <pre class="prettyprint source lang-js"><code>import {
   group,
   styleGroup,
   init,
-  writeJson,
   moduleFields as fi
 } from '@resultify/hubspot-fields-js'
 
-writeJson(init( //initialize module and write to JSON (fields.json)
-    group( // add group
-        'Group', // group label
-        'group', // group name
-        {
-            // group options (group unique options)
-            editor_options: {} // editor options
-            display_conditions: {} // display conditions
-            repeater_options: {} // repeater options
-        },
-        // add all childrens...
-        fi.text( 'Text', 'text'),
-        fi.image( 'Image', 'image'),
-        group( 'Group2', 'group2', {},
-            fi.text( 'Text2', 'text2')
-        )
+init( // initialize module and write to JSON (fields.json)
+  group( // add group
+    'Group', // group label
+    'group', // group name
+    {
+      // group options (group unique options)
+    },
+    // add all childrens...
+    fi.text('Text', 'text'),
+    fi.image('Image', 'image'),
+    group('Group2', 'group2', {},
+      fi.text('Text2', 'text2')
     )
-))
+  )
+)
 </code></pre>
 <h2 id="example">Example</h2>
 <pre class="prettyprint source lang-js"><code>import {
   group,
   styleGroup,
   init,
-  writeJson,
   moduleFields as fi
 } from '@resultify/hubspot-fields-js'
 
-writeJson(init(
+init(
   fi.boolean('Boolean', 'boolean_field', {
     display: 'toggle',
     default: true,
-    editor_options: {
-      help_text: 'tooltip',
-      required: true
-    }
+    help_text: 'tooltip',
+    required: true
   }),
   fi.choice('Choice', 'choice_field', {
-    default: 'value 1',
+    choices: [
+      ['value1', 'Value 1'],
+      ['value2', 'Value 2']
+    ],
+    default: 'value1',
     display: 'radio',
-    editor_options: {
-      locked: true,
-      inline_help_text: 'Inline'
-    }
+    inline_help_text: 'Choice help text',
   }),
   fi.color('Color', 'color_field', {
     show_opacity: false,
     default: {
       color: '#FF0201'
     },
-    display_conditions: {
-      visibility: {
-        controlling_field_path: 'boolean_field',
-        operator: 'EQUAL',
-        controlling_value_regex: 'true'
-      }
+    visibility: {
+      controlling_field_path: 'boolean_field',
+      operator: 'EQUAL',
+      controlling_value_regex: 'true'
     }
   }),
   fi.font('Font', 'font_field', {
@@ -224,10 +215,8 @@ writeJson(init(
   }),
   fi.icon('Icon', 'icon_field'),
   fi.image('Image', 'image_field', {
-    repeater_options: {
-      occurrence: {
-        max: 10
-      }
+    occurrence: {
+      max: 10
     }
   }),
   fi.link('Link', 'link_field', {
@@ -236,25 +225,18 @@ writeJson(init(
         type: 'CONTENT'
       }
     },
-    editor_options: {
-      required: true
-    },
-    repeater_options: {
-      occurrence: {}
-    }
+    required: true,
+    occurrence: {}
   }),
   fi.number('Number', 'number_field', {
     suffix: '%',
     max: 1000,
     step: 1,
-    repeater_options_default: {
-      occurrence: {
-        min: 2,
-        default: 4
-      },
-      default: []
-    }
-
+    occurrence: {
+      min: 2,
+      default: 4
+    },
+    default: []
   }),
   fi.richtext('Rich text', 'richtext_field', {
     default: '&lt;h1>Default rich text&lt;/h1>'
@@ -262,20 +244,10 @@ writeJson(init(
   fi.text('Text', 'text_field', {
     show_emoji_picker: true,
     default: 'Default text',
-    placeholder: 'Placeholder',
-    repeater_options_default: {
-      occurrence: {
-        default: 5
-      },
-      default: ['Default text', 'Default text', 'Default text', 'Default text', 'Default text']
-    }
+    placeholder: 'Placeholder'
   }),
-  fi.url('URL', 'url_field', {
-    default: {
-      type: 'BLOG'
-    }
-  })
-))
+  fi.url('URL', 'url_field')
+)
 </code></pre>
 <p>Check more examples in <code>partials</code> folder.</p>
 <h2 id="content-tab-fields-vs-style-tab-fields">Content tab fields vs Style tab fields</h2>
@@ -289,17 +261,17 @@ writeJson(init(
 </thead>
 <tbody>
 <tr>
-<td>❌ Date</td>
+<td>✅ Date</td>
 <td>✅ Gradient</td>
 <td>✅ Boolean</td>
 </tr>
 <tr>
-<td>❌ Date and time</td>
+<td>✅ Date and time</td>
 <td>✅ Spacing</td>
 <td>✅ Choice</td>
 </tr>
 <tr>
-<td>❌ Embed</td>
+<td>✅ Embed</td>
 <td>✅ Background image</td>
 <td>✅ Number</td>
 </tr>
@@ -314,7 +286,7 @@ writeJson(init(
 <td>✅ Icon</td>
 </tr>
 <tr>
-<td>❌ Simple menu</td>
+<td>✅ Simple menu</td>
 <td>✅ Text alignment</td>
 <td>✅ Image</td>
 </tr>
@@ -329,82 +301,82 @@ writeJson(init(
 <td></td>
 </tr>
 <tr>
-<td>❌ Blog</td>
+<td>✅ Blog</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ CRM object</td>
+<td>✅ CRM object</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ CRM object property</td>
+<td>✅ CRM object property</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ CTA</td>
+<td>✅ CTA</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Email addres</td>
+<td>✅ Email addres</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ File</td>
+<td>✅ File</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Followup email</td>
+<td>✅ Followup email</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Form</td>
+<td>✅ Form</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ HubDB row</td>
+<td>✅ HubDB row</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ HubDB table</td>
+<td>✅ HubDB table</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Logo</td>
+<td>✅ Logo</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Meeting</td>
+<td>✅ Meeting</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Menu</td>
+<td>✅ Menu</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Page</td>
+<td>✅ Page</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Tag</td>
+<td>✅ Tag</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>❌ Video</td>
+<td>✅ Video</td>
 <td></td>
 <td></td>
 </tr>
