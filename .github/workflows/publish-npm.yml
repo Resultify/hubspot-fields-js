@@ -1,5 +1,4 @@
 name: Publish NPM Package
-
 on:
   release:
     types: [published]
@@ -20,3 +19,8 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+
+      - name: PKG versions
+        run: |
+          node -v
+          npm -v
