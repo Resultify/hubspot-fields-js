@@ -74,35 +74,34 @@ npm install @resultify/hubspot-fields-js
 
 
 ## `field.js` structure
-Each field or group with some exceptions consists of:
+Each field or group consists of:
 - Label
 - Name
-- Content options (unique options per field)
-- Editor options
-- Display conditions
-- Repeater options
+- Parameters based on the HubSpot fields documentation
 
 ```js
 import {
   group,
   styleGroup,
   init,
-  writeJson,
   moduleFields as fi
 } from '@resultify/hubspot-fields-js'
 
-writeJson(init( //initialize module and write to JSON (fields.json)
-    fi.text( // add text field
-        'Text', // label
-        'text', // name
-        {
-            // content options (unique options per field)
-            editor_options: {} // editor options
-            display_conditions: {} // display conditions
-            repeater_options: {} // repeater options
-        }
-    )
-))
+init( // initialize module and write to JSON (fields.json)
+  fi.text( // add text field
+    'Text', // label
+    'text', // name
+    {
+      help_text: 'Help text',
+      display_width: 'half_width',
+      allow_new_line: true
+      // ...all other parameters based on the HubSpot fields documentation
+    }
+  ),
+  styleGroup(
+    fi.color('Text color', 'text_color')
+  )
+)
 ```
 
 ```js
@@ -110,28 +109,24 @@ import {
   group,
   styleGroup,
   init,
-  writeJson,
   moduleFields as fi
 } from '@resultify/hubspot-fields-js'
 
-writeJson(init( //initialize module and write to JSON (fields.json)
-    group( // add group
-        'Group', // group label
-        'group', // group name
-        {
-            // group options (group unique options)
-            editor_options: {} // editor options
-            display_conditions: {} // display conditions
-            repeater_options: {} // repeater options
-        },
-        // add all childrens...
-        fi.text( 'Text', 'text'),
-        fi.image( 'Image', 'image'),
-        group( 'Group2', 'group2', {},
-            fi.text( 'Text2', 'text2')
-        )
+init( // initialize module and write to JSON (fields.json)
+  group( // add group
+    'Group', // group label
+    'group', // group name
+    {
+      // group options (group unique options)
+    },
+    // add all childrens...
+    fi.text('Text', 'text'),
+    fi.image('Image', 'image'),
+    group('Group2', 'group2', {},
+      fi.text('Text2', 'text2')
     )
-))
+  )
+)
 ```
 
 ## Example
@@ -141,38 +136,34 @@ import {
   group,
   styleGroup,
   init,
-  writeJson,
   moduleFields as fi
 } from '@resultify/hubspot-fields-js'
 
-writeJson(init(
+init(
   fi.boolean('Boolean', 'boolean_field', {
     display: 'toggle',
     default: true,
-    editor_options: {
-      help_text: 'tooltip',
-      required: true
-    }
+    help_text: 'tooltip',
+    required: true
   }),
   fi.choice('Choice', 'choice_field', {
-    default: 'value 1',
+    choices: [
+      ['value1', 'Value 1'],
+      ['value2', 'Value 2']
+    ],
+    default: 'value1',
     display: 'radio',
-    editor_options: {
-      locked: true,
-      inline_help_text: 'Inline'
-    }
+    inline_help_text: 'Choice help text',
   }),
   fi.color('Color', 'color_field', {
     show_opacity: false,
     default: {
       color: '#FF0201'
     },
-    display_conditions: {
-      visibility: {
-        controlling_field_path: 'boolean_field',
-        operator: 'EQUAL',
-        controlling_value_regex: 'true'
-      }
+    visibility: {
+      controlling_field_path: 'boolean_field',
+      operator: 'EQUAL',
+      controlling_value_regex: 'true'
     }
   }),
   fi.font('Font', 'font_field', {
@@ -186,10 +177,8 @@ writeJson(init(
   }),
   fi.icon('Icon', 'icon_field'),
   fi.image('Image', 'image_field', {
-    repeater_options: {
-      occurrence: {
-        max: 10
-      }
+    occurrence: {
+      max: 10
     }
   }),
   fi.link('Link', 'link_field', {
@@ -198,25 +187,18 @@ writeJson(init(
         type: 'CONTENT'
       }
     },
-    editor_options: {
-      required: true
-    },
-    repeater_options: {
-      occurrence: {}
-    }
+    required: true,
+    occurrence: {}
   }),
   fi.number('Number', 'number_field', {
     suffix: '%',
     max: 1000,
     step: 1,
-    repeater_options_default: {
-      occurrence: {
-        min: 2,
-        default: 4
-      },
-      default: []
-    }
-
+    occurrence: {
+      min: 2,
+      default: 4
+    },
+    default: []
   }),
   fi.richtext('Rich text', 'richtext_field', {
     default: '<h1>Default rich text</h1>'
@@ -224,49 +206,39 @@ writeJson(init(
   fi.text('Text', 'text_field', {
     show_emoji_picker: true,
     default: 'Default text',
-    placeholder: 'Placeholder',
-    repeater_options_default: {
-      occurrence: {
-        default: 5
-      },
-      default: ['Default text', 'Default text', 'Default text', 'Default text', 'Default text']
-    }
+    placeholder: 'Placeholder'
   }),
-  fi.url('URL', 'url_field', {
-    default: {
-      type: 'BLOG'
-    }
-  })
-))
+  fi.url('URL', 'url_field')
+)
 ```
 Check more examples in `partials` folder.
 
 ## Content tab fields vs Style tab fields
 |Content tab|Style tab|Universal|
 |---|---|---|
-|❌ Date|✅ Gradient|✅ Boolean|
-|❌ Date and time|✅ Spacing|✅ Choice|
-|❌ Embed|✅ Background image|✅ Number|
+|✅ Date|✅ Gradient|✅ Boolean|
+|✅ Date and time|✅ Spacing|✅ Choice|
+|✅ Embed|✅ Background image|✅ Number|
 |✅ Link|✅ Border|✅ Color|
 |✅ Rich text|✅ Alignment|✅ Icon|
-|❌ Simple menu|✅ Text alignment|✅ Image|
+|✅ Simple menu|✅ Text alignment|✅ Image|
 |✅ Text||✅ Font|
 |✅ Url||
-|❌ Blog||
-|❌ CRM object||
-|❌ CRM object property||
-|❌ CTA||
-|❌ Email addres||
-|❌ File||
-|❌ Followup email||
-|❌ Form||
-|❌ HubDB row||
-|❌ HubDB table||
-|❌ Logo||
-|❌ Meeting||
-|❌ Menu||
-|❌ Page||
-|❌ Tag||
-|❌ Video||
+|✅ Blog||
+|✅ CRM object||
+|✅ CRM object property||
+|✅ CTA||
+|✅ Email addres||
+|✅ File||
+|✅ Followup email||
+|✅ Form||
+|✅ HubDB row||
+|✅ HubDB table||
+|✅ Logo||
+|✅ Meeting||
+|✅ Menu||
+|✅ Page||
+|✅ Tag||
+|✅ Video||
 
 ✅ - _implemented_ / ❌ - _not implemented_
