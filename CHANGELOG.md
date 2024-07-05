@@ -1,3 +1,11 @@
+### v1.0.1 `July 5, 2024`
+* **[DOC]** update readme with new info and examples [`5505da1`](https://github.com/Resultify/hubspot-fields-js/commit/5505da1) (dmh)
+* **[TEST]** update github actions config [`866da35`](https://github.com/Resultify/hubspot-fields-js/commit/866da35) (dmh)
+* **[TASK]** update npm deps [`f2a3d4f`](https://github.com/Resultify/hubspot-fields-js/commit/f2a3d4f) (dmh)
+* **[TASK]** update types and jsdoc config [`6e670b6`](https://github.com/Resultify/hubspot-fields-js/commit/6e670b6) (dmh)
+
+***
+
 ### v1.0.0 `June 25, 2024`
 * **[TEST]** update github actions tests [`0acd46e`](https://github.com/Resultify/hubspot-fields-js/commit/0acd46e) (dmh)
 * **[TASK]** general refactor, use fields types from hubspot react modules (#3) [`f6047e8`](https://github.com/Resultify/hubspot-fields-js/commit/f6047e8) (Dmytro Hrynevych)
