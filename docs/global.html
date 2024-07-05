@@ -13,7 +13,7 @@
     <div class="container">
 
         <nav class="sidenav">
-            <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Partials.html">Partials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#group">group</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#styleGroup">styleGroup</a></li><li><a href="global.html#writeJson">writeJson</a></li></ul>
+            <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Fields.html">Fields</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#group">group</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#styleGroup">styleGroup</a></li></ul>
         </nav>
 
         <main id="main" class="main">
@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="group" data-heading-label="group" ><span class="type-signature"></span>group<span class="signature">(label, name, fields<span class="signature-attributes">opt</span>, &hellip;childrens)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
+    <h4 class="name" id="group" data-heading-label="group" ><span class="type-signature"></span>group<span class="signature">(label, name, fields, &hellip;childrens)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
     
 
     
@@ -112,7 +112,7 @@
 
 
 <div class="description">
-    <h4 id="fields-group.-when-fields-are-related-to-each-other-often-it-makes-sense-for-them-to-be-displayed-visually-grouped.">Fields group. When fields are related to each other often it makes sense for them to be displayed visually grouped.</h4>
+    <h4 id="create-a-group-with-other-fields-inside.">Create a group with other fields inside.</h4>
 </div>
 
 
@@ -175,7 +175,7 @@
 
             
 
-            <td class="description last"><p>The text the content creator sees describing the group. May contain spaces.</p></td>
+            <td class="description last"><p>Group label</p></td>
         </tr>
 
     
@@ -206,7 +206,7 @@
 
             
 
-            <td class="description last"><p>Group field/HubL variable name, which you'll reference when incorporating the group field and its values in the module or theme. <code>Cannot contain spaces or special characters!</code></p></td>
+            <td class="description last"><p>Group name (HubL variable name)</p></td>
         </tr>
 
     
@@ -219,7 +219,10 @@
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">BASE_FIELDS</span>
+|
+
+<span class="param-type">GROUP_FIELD</span>
 
 
             
@@ -228,8 +231,6 @@
             
                 <td class="attributes">
                 
-                    &lt;optional><br>
-                
 
                 
 
@@ -239,226 +240,7 @@
 
             
 
-            <td class="description last">
-                <h6>Properties</h6>
-                
-
-<div class="responsive-table">
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>expanded</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p><code>false</code> Field groups can be set to be expanded by default by setting the expanded boolean property to true</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>editor_options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#EDITOR_OPTIONS">EDITOR_OPTIONS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Editor options group.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>display_conditions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Display conditions group.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeater_options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#REPEATER_OPTIONS">REPEATER_OPTIONS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Repeater options. Keep <code>occurrence</code> object empty to just enable a feature. <code>repeater_options: {occurrence: {}}</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeater_options_default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Repeater options with predefined repeated fields and <code>default</code> values for each field.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
+            <td class="description last"><p>Group settings</p></td>
         </tr>
 
     
@@ -471,7 +253,7 @@
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;<a href="global.html#NESTED_COMMON_FIELDS">NESTED_COMMON_FIELDS</a>></span>
+<span class="param-type">CHILDRENS</span>
 
 
             
@@ -491,7 +273,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>Group children fields</p></td>
         </tr>
 
     
@@ -533,7 +315,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="group.js.html">group.js</a>, <a href="group.js.html#line39">line 39</a>
+        <a href="group.js.html">group.js</a>, <a href="group.js.html#line10">line 10</a>
     </li></ul></dd>
     
 
@@ -580,17 +362,6 @@
 
 
 
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>group('Group', 'group', {group_options},
-   fi.text('Text_label1', 'text__name1'),
-   fi.text('Text_label2', 'text__name2'),
-   group('Group2', 'group2', {group2_options},
-       fi.text('Text_label3', 'text_name3')
-   )
-)</code></pre>
-
-
 
         
             
@@ -598,7 +369,7 @@
     
 
     
-    <h4 class="name" id="init" data-heading-label="init" ><span class="type-signature"></span>init<span class="signature">(&hellip;fields)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>>}</span></h4>
+    <h4 class="name" id="init" data-heading-label="init" ><span class="type-signature">(async) </span>init<span class="signature">(&hellip;fields)</span><span class="type-signature"></span></h4>
     
 
     
@@ -606,8 +377,8 @@
 
 
 <div class="description">
-    <h4 id="initialize-and-return-an-array-of-fields-object-from-fields.js">Initialize and return an array of fields object from fields.js</h4>
-<p>Combine all the fields and groups objects into one array, and return it.</p>
+    <h4 id="initialize-and-write-an-array-of-fields-object-from-fields.js-to-a-fields.json-file">Initialize and write an array of fields object from fields.js to a fields.json file</h4>
+<p>Combine all the fields and groups objects into one array and write it to fields.json file</p>
 </div>
 
 
@@ -652,7 +423,7 @@
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;<a href="global.html#NESTED_COMMON_FIELDS">NESTED_COMMON_FIELDS</a>></span>
+<span class="param-type">CHILDRENS</span>
 
 
             
@@ -714,361 +485,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="init.js.html">init.js</a>, <a href="init.js.html#line53">line 53</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>\/* eslint-disable no-unused-vars *\/
- import {
-   group,
-   styleGroup,
-   initModule,
-   moduleFields as fi
- } from '@resultify/hubspot-fields-js'
-
- init(
-   styleGroup(
-     fi.alignment('Alignment', 'alignment')
-   ),
-   group('Group', 'group', {},
-    fi.text('Text', 'text')
-   ),
-   fi.link('Link', 'link')
- )</code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="styleGroup" data-heading-label="styleGroup" ><span class="type-signature"></span>styleGroup<span class="signature">(&hellip;childrens)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <h4 id="main-high-level-style-group-wrapper.-use-only-once-to-wrap-all-style-fields.">Main high-level Style group wrapper. Use only once to wrap all style fields.</h4>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<div class="responsive-table">
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>childrens</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="global.html#NESTED_COMMON_FIELDS">NESTED_COMMON_FIELDS</a>></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="group.js.html">group.js</a>, <a href="group.js.html#line78">line 78</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>styleGroup(
-   fi.alignment('alignment', 'Alignment')
-)</code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="writeJson" data-heading-label="writeJson" ><span class="type-signature">(async) </span>writeJson<span class="signature">(data)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <h4 id="write-fields-data-from-fields.js-to-a-fields.json">Write fields data from fields.js to a fields.json</h4>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<div class="responsive-table">
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>data</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="init.js.html">init.js</a>, <a href="init.js.html#line92">line 92</a>
+        <a href="init.js.html">init.js</a>, <a href="init.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
@@ -1109,24 +526,186 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>\/* eslint-disable no-unused-vars *\/
- import {
-   group,
-   styleGroup,
-   initModule,
-   moduleFields as fi
- } from '@resultify/hubspot-fields-js'
+    <pre class="prettyprint"><code>import { init, group, styleGroup, moduleFields as fi } from '@resultify/hubspot-fields-js'
 
- writeJson(JSON_DATA)
-
- // or
-
- writeJson(init(
-   group(
-     fi.number('Number', 'number')
+ init(
+   styleGroup(
+     fi.alignment('Alignment', 'alignment')
    ),
-   fi.number('Number', 'number')
- ))</code></pre>
+   group('Group', 'group', {},
+    fi.text('Text', 'text')
+   ),
+   fi.link('Link', 'link')
+ )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="styleGroup" data-heading-label="styleGroup" ><span class="type-signature"></span>styleGroup<span class="signature">(&hellip;childrens)</span><span class="type-signature"> &rarr; {<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <h4 id="create-a-group-with-other-fields-inside.">Create a group with other fields inside.</h4>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="responsive-table">
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>childrens</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">CHILDRENS</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Group children fields</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="group.js.html">group.js</a>, <a href="group.js.html#line34">line 34</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
 
 
 
@@ -1138,438 +717,13 @@
 
         
                 
-<h4 class="name" id="ADVANCED_VISIBILITY" data-heading-label="ADVANCED_VISIBILITY">ADVANCED_VISIBILITY</h4>
-
-
-
-
-<div class="description">
-    <h4 id="advanced-visibility">Advanced visibility</h4>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>advanced_visibility.boolean_operator</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'OR'</span>
-|
-
-<span class="param-type">'AND'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    OR
-                
-                </td>
-            
-
-            <td class="description last"><p><code>OR</code> The boolean operator for the conditional criteria. Can be <code>AND</code> or <code>OR</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>advanced_visibility.criteria</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="global.html#ADVANCED_VISIBILITY_CRITERIA">ADVANCED_VISIBILITY_CRITERIA</a>></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>An array of visibility objects that defines the conditional criteria that needs to be met for the field to display.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line40">line 40</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="ADVANCED_VISIBILITY_CRITERIA" data-heading-label="ADVANCED_VISIBILITY_CRITERIA">ADVANCED_VISIBILITY_CRITERIA</h4>
-
-
-
-
-<div class="description">
-    <h4 id="advanced-visibility-criteria">Advanced visibility criteria</h4>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>controlling_field_path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The path of the field that controls the display condition.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>controlling_value_regex</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The value in the controlling field that needs to be met to display the field.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>operator</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'NOT_EQUAL'</span>
-|
-
-<span class="param-type">'EQUAL'</span>
-|
-
-<span class="param-type">'EMPTY'</span>
-|
-
-<span class="param-type">'NOT_EMPTY'</span>
-|
-
-<span class="param-type">'MATCHES_REGEX'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The operator that defines how the <code>controlling_value_regex</code> value needs to be met.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>property</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Sets visibility based on a specific property of the target field. For example, you can enable visibility when an image field's src property is equal to a specific value. By default, if no value is provided for this field, visibility is based on the stringified value of <code>controlling_value_regex</code>.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line31">line 31</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
 <h4 class="name" id="COMMON_FIELDS" data-heading-label="COMMON_FIELDS">COMMON_FIELDS</h4>
 
 
 
 
 <div class="description">
-    <h4 id="required-module-fields">Required module fields</h4>
+    <h4 id="required-module%2Fgroup-fields">Required module/group fields</h4>
 </div>
 
 
@@ -1613,35 +767,6 @@
     </thead>
 
     <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
     
 
         <tr>
@@ -1764,37 +889,6 @@
 
         <tr>
             
-                <td class="name"><code>locked</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>children</code></td>
             
 
@@ -1802,1386 +896,6 @@
             
                 
 <span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line83">line 83</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="DISPLAY_CONDITIONS" data-heading-label="DISPLAY_CONDITIONS">DISPLAY_CONDITIONS</h4>
-
-
-
-
-<div class="description">
-    <p>Occasionally, you may want to show a field or field group, but only under specfic conditions. Examples might include: <code>Address fields that correspond to a specific country</code> or <code>An image description that is only entered after an image is selected</code></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>visibility</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Sets the field's display conditions. For example, you can set a field to only display when another checkbox field has been selected</p>
-                <h6>Properties</h6>
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>hidden_subfields</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#HIDDEN_SUBFIELDS">HIDDEN_SUBFIELDS</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Hide subfields of a field. For example, you can hide the margin from spacing field and show only the padding. Ony works for Theme settings fields.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>controlling_field_path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>The path of the field that controls the display condition. If the field is not nested inside a field group, use the field's name (i.e. <code>field_name</code>). For fields nested in groups, the path should match its grouping structure, separated by a period. For example: <code>field_group_name.field_name</code> or <code>parent_group.child_group.field_name</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>controlling_value_regex</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>The regular expression in the controlling field that needs to be present for the field to display. The regex must match the entire string (not a subset) and is run case-sensitively.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>operator</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'NOT_EQUAL'</span>
-|
-
-<span class="param-type">'EQUAL'</span>
-|
-
-<span class="param-type">'EMPTY'</span>
-|
-
-<span class="param-type">'NOT_EMPTY'</span>
-|
-
-<span class="param-type">'MATCHES_REGEX'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    EMPTY
-                
-                </td>
-            
-
-            <td class="description last"><p><code>EMPTY</code> The operator that defines how the <code>controlling_value_regex</code> value needs to be met</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>property</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Sets visibility based on a specific property of the target field. For example, you can enable visibility when an image field's src property is equal to a specific value. By default, if no value is provided for this field, visibility is based on the stringified value of <code>controlling_value_regex</code>.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>advanced_visibility</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>To include multiple criteria with multiple operators, as well as order of operations, you can use advanced_visibility.</p>
-                <h6>Properties</h6>
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>boolean_operator</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'OR'</span>
-|
-
-<span class="param-type">'AND'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    OR
-                
-                </td>
-            
-
-            <td class="description last"><p><code>OR</code> The boolean operator for the conditional criteria. Can be <code>AND</code> or <code>OR</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>criteria</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="global.html#ADVANCED_VISIBILITY_CRITERIA">ADVANCED_VISIBILITY_CRITERIA</a>></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>An array of visibility objects that defines the conditional criteria that needs to be met for the field to display.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>children</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="global.html#ADVANCED_VISIBILITY">ADVANCED_VISIBILITY</a>></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line47">line 47</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="EDITOR_OPTIONS" data-heading-label="EDITOR_OPTIONS">EDITOR_OPTIONS</h4>
-
-
-
-
-<div class="description">
-    <h4 id="hubspot-module-editor-options">HubSpot module editor options</h4>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>required</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p><code>false</code> Sets whether the field can be left blank in the editor. If true, content cannot be published without a value in the field.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>locked</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p><code>false</code> Sets whether the field is editable in the content editor. If true, the field will not appear in the content editor.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>help_text</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Text that displays in the editor within a tooltip on hover to assist the content creator (limit 300 characters). Best used for information that is supplementary but not required to use the field. You can include the following HTML tags (other tags will be ignored on render): a, b, br, em, i, p, small, strong, span.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>inline_help_text</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Text that displays inline below field's label (limit 400 characters). Best used for information required to use the field. You can include the following HTML tags (other tags will be ignored on render): a, b, br, em, i, p, small, strong, span.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>display_width</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">null</span>
-|
-
-<span class="param-type">'half_width'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    full_width
-                
-                </td>
-            
-
-            <td class="description last"><p><code>full_width</code> By default, fields are full-width in the editor.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>inherited_value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>property_value_paths</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#INHERITED_VALUES">INHERITED_VALUES</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line7">line 7</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="HIDDEN_SUBFIELDS" data-heading-label="HIDDEN_SUBFIELDS">HIDDEN_SUBFIELDS</h4>
-
-
-
-
-<div class="description">
-    <h4 id="hidden-subfields-properties">Hidden subfields properties</h4>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>margin</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>padding</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>bold</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>italic</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>underline</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>color</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>size</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line19">line 19</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="INHERITED_VALUES" data-heading-label="INHERITED_VALUES">INHERITED_VALUES</h4>
-
-
-
-
-<div class="description">
-    <h4 id="inherited-values">Inherited values</h4>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">any</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>color</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
 
 
             
@@ -3257,503 +971,13 @@
 
             
                 
-<h4 class="name" id="LINK_DEFAULT" data-heading-label="LINK_DEFAULT">LINK_DEFAULT</h4>
-
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>url</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default URL object</p>
-                <h6>Properties</h6>
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>content_id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default URL content ID</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">'EXTERNAL'</span>
-|
-
-<span class="param-type">'CONTENT'</span>
-|
-
-<span class="param-type">'FILE'</span>
-|
-
-<span class="param-type">'EMAIL_ADDRESS'</span>
-|
-
-<span class="param-type">'BLOG'</span>
-|
-
-<span class="param-type">'CALL_TO_ACTION'</span>
-|
-
-<span class="param-type">'PHONE_NUMBER'</span>
-|
-
-<span class="param-type">'WHATSAPP_NUMBER'</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default URL type</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>href</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default URL href</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>open_in_new_tab</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default open_in_new_tab value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>no_follow</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default no_follow value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sponsored</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default sponsored value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>user_generated_content</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Default user_generated_content value</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="content-tab-fields.js.html">content-tab-fields.js</a>, <a href="content-tab-fields.js.html#line53">line 53</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="LINK_SUPPORTED_TYPES" data-heading-label="LINK_SUPPORTED_TYPES">LINK_SUPPORTED_TYPES</h4>
-
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">'EXTERNAL'</span>
-|
-
-<span class="param-type">'CONTENT'</span>
-|
-
-<span class="param-type">'FILE'</span>
-|
-
-<span class="param-type">'EMAIL_ADDRESS'</span>
-|
-
-<span class="param-type">'BLOG'</span>
-|
-
-<span class="param-type">'CALL_TO_ACTION'</span>
-|
-
-<span class="param-type">'PHONE_NUMBER'</span>
-|
-
-<span class="param-type">'WHATSAPP_NUMBER'</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="content-tab-fields.js.html">content-tab-fields.js</a>, <a href="content-tab-fields.js.html#line65">line 65</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="NESTED_COMMON_FIELDS" data-heading-label="NESTED_COMMON_FIELDS">NESTED_COMMON_FIELDS</h4>
+<h4 class="name" id="CSS_UNIT" data-heading-label="CSS_UNIT">CSS_UNIT</h4>
 
 
 
 
 <div class="description">
-    <h4 id="nested-common-fields">nested common fields</h4>
+    <h4 id="css-unit">CSS unit</h4>
 </div>
 
 
@@ -3762,16 +986,37 @@
     <ul>
         <li>
             
-<span class="param-type"><a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a></span>
+<span class="param-type">'px'</span>
 |
 
-<span class="param-type">Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>></span>
+<span class="param-type">'pt'</span>
 |
 
-<span class="param-type">Array.&lt;(<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>|Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>>)></span>
+<span class="param-type">'em'</span>
 |
 
-<span class="param-type">Array.&lt;(<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>|Array.&lt;(<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>|Array.&lt;<a href="global.html#COMMON_FIELDS">COMMON_FIELDS</a>>)>)></span>
+<span class="param-type">'rem'</span>
+|
+
+<span class="param-type">'%'</span>
+|
+
+<span class="param-type">'ex'</span>
+|
+
+<span class="param-type">'ch'</span>
+|
+
+<span class="param-type">'vh'</span>
+|
+
+<span class="param-type">'vmax'</span>
+|
+
+<span class="param-type">'vmin'</span>
+|
+
+<span class="param-type">'vw'</span>
 
 
         </li>
@@ -3810,704 +1055,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line95">line 95</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REPEATER_OPTIONS" data-heading-label="REPEATER_OPTIONS">REPEATER_OPTIONS</h4>
-
-
-
-
-<div class="description">
-    <p>Repeaters are fields and groups that can create multiple objects and display them using a for loop. Examples might include: <code>A gallery of multiple slides</code>, <code>A collection of testimonials</code>, <code>A group of staff head shots</code></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>occurrence</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>To make the editing experience better and prevent content editors from providing values that you have not programmatically accommodated for, we allow you to set minimum and maximum values for how many items content creators can add to a repeating field or repeating group. Keep <code>occurrence</code> object empty to just enable a feature - <code>repeater_options: {occurrence: {}}</code></p>
-                <h6>Properties</h6>
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>min</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Minimum number of occurrences of this field group. Prevents users from having less than this number of items in the UI.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Maximum number of occurrences of this group. Prevents the content creator from adding more than this number of items in the UI.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line63">line 63</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="REPEATER_OPTIONS_DEFAULT" data-heading-label="REPEATER_OPTIONS_DEFAULT">REPEATER_OPTIONS_DEFAULT</h4>
-
-
-
-
-<div class="description">
-    <p>Repeaters are fields and groups that can create multiple objects and display them using a for loop. Examples might include: <code>A gallery of multiple slides</code>, <code>A collection of testimonials</code>, <code>A group of staff head shots</code></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>occurrence</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>To make the editing experience better and prevent content editors from providing values that you have not programmatically accommodated for, we allow you to set minimum and maximum values for how many items content creators can add to a repeating field or repeating group</p>
-                <h6>Properties</h6>
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>min</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Minimum number of occurrences of this field group. Prevents users from having less than this number of items in the UI.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Maximum number of occurrences of this group. Prevents the content creator from adding more than this number of items in the UI.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The default number of items to show in the UI when the field is first added to the module.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;(number|string|Object)></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>default group values. If <code>occurrence.default</code> defined this should be an array of objects|strings|numbers</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line72">line 72</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id="RGBA_COLOR" data-heading-label="RGBA_COLOR">RGBA_COLOR</h4>
-
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<div class="responsive-table">
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>r</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Red value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>g</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Green value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>b</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Blue value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>a</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Alpha value <code>0-1</code></p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</div>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="style-tab-fields.js.html">style-tab-fields.js</a>, <a href="style-tab-fields.js.html#line135">line 135</a>
+        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -4710,7 +1258,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="fields.js.html">fields.js</a>, <a href="fields.js.html#line224">line 224</a>
+        <a href="types_types.js.html">types/types.js</a>, <a href="types_types.js.html#line172">line 172</a>
     </li></ul></dd>
     
 
@@ -4746,7 +1294,7 @@
         </main>
 
         <footer class="footer">
-            Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+            Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
