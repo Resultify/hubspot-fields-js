@@ -1,3 +1,8 @@
+### v1.0.2 `July 15, 2024`
+* **[TASK]** update moduleResolution to bundler for jsconfig.json [`652ec00`](https://github.com/Resultify/hubspot-fields-js/commit/652ec00) (dmh)
+
+***
+
 ### v1.0.1 `July 5, 2024`
 * **[DOC]** update readme with new info and examples [`5505da1`](https://github.com/Resultify/hubspot-fields-js/commit/5505da1) (dmh)
 * **[TEST]** update github actions config [`866da35`](https://github.com/Resultify/hubspot-fields-js/commit/866da35) (dmh)
