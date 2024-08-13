@@ -1,3 +1,8 @@
+### v1.0.3 `August 13, 2024`
+* **[TASK]** update types, add null type for default property [`b4a2a85`](https://github.com/Resultify/hubspot-fields-js/commit/b4a2a85) (dmh)
+
+***
+
 ### v1.0.2 `July 15, 2024`
 * **[TASK]** update moduleResolution to bundler for jsconfig.json [`652ec00`](https://github.com/Resultify/hubspot-fields-js/commit/652ec00) (dmh)
 
