@@ -1,3 +1,9 @@
+### v1.1.0 `October 15, 2024`
+* **[TASK]** add new field types for group fields, including the ability to add icons to group field [`18b244b`](https://github.com/Resultify/hubspot-fields-js/commit/18b244b) (dmh)
+* **[TASK]** update npm deps [`2ff692d`](https://github.com/Resultify/hubspot-fields-js/commit/2ff692d) (dmh)
+
+***
+
 ### v1.0.3 `August 13, 2024`
 * **[TASK]** update types, add null type for default property [`b4a2a85`](https://github.com/Resultify/hubspot-fields-js/commit/b4a2a85) (dmh)
 
