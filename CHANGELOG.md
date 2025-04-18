@@ -1,3 +1,8 @@
+### v1.1.2 `April 18, 2025`
+* **[TASK]** update dependencies [`f0143e0`](https://github.com/Resultify/hubspot-fields-js/commit/f0143e0) (dmh)
+
+***
+
 ### v1.1.1 `April 18, 2025`
 * **[TASK]** add disabled controls for fields with criteria and messages for content editor [`43bd5e9`](https://github.com/Resultify/hubspot-fields-js/commit/43bd5e9) (dmh)
 
