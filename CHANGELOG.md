@@ -1,3 +1,8 @@
+### v1.1.1 `April 18, 2025`
+* **[TASK]** add disabled controls for fields with criteria and messages for content editor [`43bd5e9`](https://github.com/Resultify/hubspot-fields-js/commit/43bd5e9) (dmh)
+
+***
+
 ### v1.1.0 `October 15, 2024`
 * **[TASK]** add new field types for group fields, including the ability to add icons to group field [`18b244b`](https://github.com/Resultify/hubspot-fields-js/commit/18b244b) (dmh)
 * **[TASK]** update npm deps [`2ff692d`](https://github.com/Resultify/hubspot-fields-js/commit/2ff692d) (dmh)
