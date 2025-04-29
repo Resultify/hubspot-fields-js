@@ -1,3 +1,8 @@
+### v1.1.3 `April 29, 2025`
+* **[TASK]** add embed_versions property to FORM_FIELD type for version management [`cb7fe99`](https://github.com/Resultify/hubspot-fields-js/commit/cb7fe99) (dmh)
+
+***
+
 ### v1.1.2 `April 18, 2025`
 * **[TASK]** update dependencies [`f0143e0`](https://github.com/Resultify/hubspot-fields-js/commit/f0143e0) (dmh)
 
